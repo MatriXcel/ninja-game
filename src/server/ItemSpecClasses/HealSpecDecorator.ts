@@ -16,7 +16,6 @@ export class HealSpecDecorator implements IEquippableSpecDecorator {
         this.equippableSpecDecorator = equippableSpecDecorator;
         this.healEffect = healEffect;
     }
-
     CreateItemFromEquippableSpecDecorator(): Equippable {
         return this.equippableSpecDecorator.CreateItemFromEquippableSpecDecorator();
     }

@@ -78,7 +78,7 @@
         "affectsGlobalScope": false
       },
       "../src/server/itemspecclasses/healspecdecorator.ts": {
-        "version": "66421015824e8869393c5fb6d77cd46384a002b5aa74e4d239c4aee45ad5f770",
+        "version": "6cba13cae230c6b39f8d0b36a888cfbb169723e745399ffdaf93259e1e2b2bf1",
         "affectsGlobalScope": false
       },
       "../src/server/test.server.ts": {
