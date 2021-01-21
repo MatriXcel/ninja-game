@@ -3,48 +3,41 @@ import { FinalBonus } from "./FinalBonus";
 import { RawBonus } from "./RawBonus";
 
 
-export class Attribute extends BaseAttribute
-{
+export class Attribute extends BaseAttribute {
     rawBonuses: RawBonus[];
     finalBonuses: FinalBonus[];
     finalValue: number;
 
-    constructor(startingValue: number)
-    {
+    constructor(startingValue: number) {
         super(startingValue, 0);
 
         this.rawBonuses = this.finalBonuses = [];
         this.finalValue = startingValue;
     }
 
-    AddRawBonus(rawBonus: RawBonus)
-    {
+    AddRawBonus(rawBonus: RawBonus) {
         this.rawBonuses.push(rawBonus);
     }
 
-    AddFinalBonus(finalBonus: FinalBonus)
-    {
+    AddFinalBonus(finalBonus: FinalBonus) {
         this.finalBonuses.push(finalBonus);
     }
 
-    RemoveRawBonus(_rawBonus: RawBonus)
-    {
+    RemoveRawBonus(_rawBonus: RawBonus) {
         this.rawBonuses.forEach((rawBonus, index) => {
-            if(rawBonus === _rawBonus)
+            if (rawBonus === _rawBonus)
                 this.rawBonuses.remove(index);
         });
     }
 
-    RemoveFinalBonus(_finalBonus: FinalBonus)
-    {
+    RemoveFinalBonus(_finalBonus: FinalBonus) {
         this.finalBonuses.forEach((finalBonus, index) => {
-            if(finalBonus === _finalBonus)
+            if (finalBonus === _finalBonus)
                 this.finalBonuses.remove(index);
         });
     }
 
-    ApplyRawBonuses()
-    {
+    ApplyRawBonuses() {
         let rawBonusValue = 0;
         let rawBonusMultiplier = 0;
 
@@ -57,8 +50,7 @@ export class Attribute extends BaseAttribute
         this.finalValue *= (1 + rawBonusMultiplier);
     }
 
-    ApplyFinalBonuses()
-    {
+    ApplyFinalBonuses() {
         let finalBonusValue = 0;
         let finalBonusMultiplier = 0;
 
@@ -71,18 +63,16 @@ export class Attribute extends BaseAttribute
         this.finalValue *= (1 + finalBonusMultiplier);
     }
 
-    CalculateValue(): number
-    {
+    CalculateValue(): number {
         this.finalValue = this.baseValue;
-        
+
         this.ApplyRawBonuses();
         this.ApplyFinalBonuses();
 
         return this.finalValue;
     }
 
-    GetFinalValue()
-    {
+    GetFinalValue() {
         return this.finalValue;
     }
 }

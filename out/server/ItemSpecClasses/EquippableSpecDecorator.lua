@@ -18,16 +18,7 @@ do
 		self.modelVisualizableSpec = modelVisualizableSpec
 	end
 	function EquippableSpecDecorator:CreateItemFromSpec()
-		return self:CreateItemFromEquippableSpecDecorator()
-	end
-	function EquippableSpecDecorator:CreateItemFromModelVisualizableSpecDecorator()
-		return self.modelVisualizableSpec:CreateItemFromModelVisualizableSpecDecorator()
-	end
-	function EquippableSpecDecorator:CreateItemFromEquippableSpecDecorator()
-		return Equippable.new(self:CreateItemFromModelVisualizableSpecDecorator(), self)
-	end
-	function EquippableSpecDecorator:CreateItemFromItemSpec()
-		return self.modelVisualizableSpec:CreateItemFromItemSpec()
+		return Equippable.new(self:CreateItemFromSpec(), self)
 	end
 	function EquippableSpecDecorator:GetItemName()
 		return self.modelVisualizableSpec:GetItemName()

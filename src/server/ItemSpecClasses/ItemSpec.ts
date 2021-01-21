@@ -1,10 +1,12 @@
 import { IItem, Item } from "server/ItemClasses/Item";
 
+
+
 export interface IItemSpec {
-    CreateItemFromItemSpec(): IItem;
     GetItemName(): string;
     GetItemID(): number;
     GetItemDescription(): string;
+    CreateItemFromSpec(): IItem;
 }
 
 export class ItemSpec implements IItemSpec {
@@ -21,10 +23,6 @@ export class ItemSpec implements IItemSpec {
         this.iconID = iconID;
         this.id = ++ItemSpec.ID;
         this.itemDesc = itemDesc;
-    }
-
-    CreateItemFromItemSpec(): IItem {
-        return this.CreateItemFromSpec();
     }
 
     CreateItemFromSpec(): IItem {

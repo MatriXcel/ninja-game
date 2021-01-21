@@ -1,5 +1,5 @@
 import { RawBonus } from "./AttributeClasses/RawBonus";
-import { HealEffect } from "./Effects/HealEffect";
+import { RawHealEffect } from "./Effects/RawHealEffect";
 import { EquippableSpec } from "./ItemSpecClasses/EquippableSpec";
 import { HealSpecDecorator } from "./ItemSpecClasses/HealSpecDecorator";
 import { ItemSpec } from "./ItemSpecClasses/ItemSpec";
@@ -12,7 +12,7 @@ let holySword = new HealSpecDecorator(
         "a holy sword of the paladins",
         20
     ),
-    new HealEffect(new RawBonus(10, 0))
+    new RawHealEffect(new RawBonus(10, 0))
 );
 
 

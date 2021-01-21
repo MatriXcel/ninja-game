@@ -22,9 +22,6 @@ do
 		self.id = ItemSpec.ID
 		self.itemDesc = itemDesc
 	end
-	function ItemSpec:CreateItemFromItemSpec()
-		return self:CreateItemFromSpec()
-	end
 	function ItemSpec:CreateItemFromSpec()
 		return Item.new(self)
 	end

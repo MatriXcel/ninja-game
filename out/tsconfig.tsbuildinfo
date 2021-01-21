@@ -34,23 +34,31 @@
         "affectsGlobalScope": false
       },
       "../src/server/attributeclasses/attribute.ts": {
-        "version": "257181df46c369f8df723d9dbe4f359733d5f08e3b31e62ffb168f21c0bbbced",
+        "version": "a31932c8cc89afe635d5ee0d6399615e2b45b0d363956984fd015a370b86ea78",
         "affectsGlobalScope": false
       },
       "../src/server/effects/ieffect.ts": {
         "version": "b0326eb020adcc25f8e40c53cb94a0a8ae5e5e53416b23896765dd5cb3e81bba",
         "affectsGlobalScope": false
       },
-      "../src/server/effects/healeffect.ts": {
-        "version": "8a0b6feac2a58256a44fca171258a9c3820665e6e76f6a2937f527299e7fb04e",
+      "../src/server/effects/rawhealeffect.ts": {
+        "version": "39d188f364ef7718c4580200dd91d5d2d9fe9a792eb4fc94d40afeb314228747",
         "affectsGlobalScope": false
       },
       "../src/server/itemspecclasses/itemspec.ts": {
-        "version": "661e6b3bed00b3b2a69840a32ac4f1f4d1bf6700c83934a2eb3d8e4a5b272f94",
+        "version": "9bd659cd8689f1c79ccc0e1bc464c5b73b15b530b3a9d6c66ff901c1b2e8f969",
+        "affectsGlobalScope": false
+      },
+      "../src/server/itemclasses/hasheal.ts": {
+        "version": "951a92de5f8e4763cd70bfce8181c51e7d4f21289426ba0eaa237e20198ad8c8",
+        "affectsGlobalScope": false
+      },
+      "../src/server/itemspecclasses/healspecdecorator.ts": {
+        "version": "397b9b7dcc1fef717aec7433a1955a5d04ac9c0389196d58d19c1ef0da9c4f73",
         "affectsGlobalScope": false
       },
       "../src/server/itemspecclasses/modelvisualizablespecdecorator.ts": {
-        "version": "6b75f85a23763ba148f45c37bbeb3d2741ea44b403b42e87880975058940a3ed",
+        "version": "ef29affb6609a9e29299d13417cca89825f133ae564d00aabc00b967c132a0fe",
         "affectsGlobalScope": false
       },
       "../src/server/itemclasses/modelvisualizable.ts": {
@@ -58,11 +66,11 @@
         "affectsGlobalScope": false
       },
       "../src/server/itemclasses/item.ts": {
-        "version": "63b303cacb8824dfbad5bdba9d593e627cdb1e62c7615464d313b7a07e6bdd60",
+        "version": "d1a3e71c3568fb1b098a27b848212101272cb7658c74cc01a748c3cc600931e2",
         "affectsGlobalScope": false
       },
       "../src/server/itemspecclasses/equippablespecdecorator.ts": {
-        "version": "07c26d57686d9dee4fee6482ae4d25396db2fd5a49c14e1045802219abab81d1",
+        "version": "0d2edf3979a4d4d537f3b03d3afc85b035da6bd7edb36a1c5ce81f4d5b1bde88",
         "affectsGlobalScope": false
       },
       "../src/server/itemclasses/equippable.ts": {
@@ -70,19 +78,11 @@
         "affectsGlobalScope": false
       },
       "../src/server/itemspecclasses/equippablespec.ts": {
-        "version": "3d5d1f487d5324ea57a089ca667ed85e37ca2c21c2fcc93a72f119e3fec8cd16",
-        "affectsGlobalScope": false
-      },
-      "../src/server/itemclasses/hasheal.ts": {
-        "version": "533de9000492b4d6dc033dada065378c6fe0d5eb698f57668f0e2e27b98ed0f4",
-        "affectsGlobalScope": false
-      },
-      "../src/server/itemspecclasses/healspecdecorator.ts": {
-        "version": "6cba13cae230c6b39f8d0b36a888cfbb169723e745399ffdaf93259e1e2b2bf1",
+        "version": "9321dd77f35485fe2d2b1f86bde939241a4a4696a59b9943a29d764f356670ee",
         "affectsGlobalScope": false
       },
       "../src/server/test.server.ts": {
-        "version": "4c36911bff482f7ab362ce550536d20d004af80e6587a07c099f48645ca9960c",
+        "version": "2d9be8078139503c654d33f383ccc349c8a60ced46016831d24414d3799e6bc3",
         "affectsGlobalScope": false
       },
       "../src/server/itemspecclasses/consumablespec.ts": {
@@ -258,7 +258,7 @@
       "../src/server/attributeclasses/rawbonus.ts": [
         "../src/server/attributeclasses/baseattribute.ts"
       ],
-      "../src/server/effects/healeffect.ts": [
+      "../src/server/effects/rawhealeffect.ts": [
         "../src/server/attributeclasses/attribute.ts",
         "../src/server/attributeclasses/rawbonus.ts",
         "../src/server/effects/ieffect.ts"
@@ -302,7 +302,7 @@
         "../src/server/itemspecclasses/modelvisualizablespecdecorator.ts"
       ],
       "../src/server/itemspecclasses/healspecdecorator.ts": [
-        "../src/server/effects/healeffect.ts",
+        "../src/server/effects/rawhealeffect.ts",
         "../src/server/itemclasses/equippable.ts",
         "../src/server/itemclasses/hasheal.ts",
         "../src/server/itemclasses/item.ts",
@@ -314,9 +314,11 @@
         "../src/server/itemclasses/item.ts"
       ],
       "../src/server/itemspecclasses/modelvisualizablespecdecorator.ts": [
+        "../src/server/itemclasses/equippable.ts",
         "../src/server/itemclasses/item.ts",
         "../src/server/itemclasses/modelvisualizable.ts",
         "../src/server/itemspecclasses/equippablespec.ts",
+        "../src/server/itemspecclasses/healspecdecorator.ts",
         "../src/server/itemspecclasses/itemspec.ts"
       ],
       "../src/server/main.server.ts": [
@@ -324,7 +326,7 @@
       ],
       "../src/server/test.server.ts": [
         "../src/server/attributeclasses/rawbonus.ts",
-        "../src/server/effects/healeffect.ts",
+        "../src/server/effects/rawhealeffect.ts",
         "../src/server/itemspecclasses/equippablespec.ts",
         "../src/server/itemspecclasses/healspecdecorator.ts",
         "../src/server/itemspecclasses/itemspec.ts",

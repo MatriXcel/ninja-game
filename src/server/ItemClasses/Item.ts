@@ -4,7 +4,7 @@ import { IModelVisualizable } from "./ModelVisualizable";
 export interface IItem {
 }
 
-export class Item implements IModelVisualizable {
+export class Item {
     itemSpec: IItemSpec
 
     constructor(itemSpec: IItemSpec) {

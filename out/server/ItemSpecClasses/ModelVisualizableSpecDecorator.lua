@@ -18,9 +18,6 @@ do
 		self.itemSpec = itemSpec
 		self.model = model
 	end
-	function ModelVisualizableSpecDecorator:CreateItemFromItemSpec()
-		return self.itemSpec:CreateItemFromItemSpec()
-	end
 	function ModelVisualizableSpecDecorator:GetItemID()
 		return self.itemSpec:GetItemID()
 	end
@@ -30,11 +27,8 @@ do
 	function ModelVisualizableSpecDecorator:GetItemName()
 		return self.itemSpec:GetItemName()
 	end
-	function ModelVisualizableSpecDecorator:CreateItemFromModelVisualizableSpecDecorator()
-		return self:CreateItemFromSpec()
-	end
 	function ModelVisualizableSpecDecorator:CreateItemFromSpec()
-		return ModelVisualizable.new(self:CreateItemFromItemSpec(), self)
+		return ModelVisualizable.new(self.itemSpec:CreateItemFromSpec(), self)
 	end
 end
 return {

@@ -18,15 +18,6 @@ do
 		self.equippableSpecDecorator = equippableSpecDecorator
 		self.healEffect = healEffect
 	end
-	function HealSpecDecorator:CreateItemFromEquippableSpecDecorator()
-		return self.equippableSpecDecorator:CreateItemFromEquippableSpecDecorator()
-	end
-	function HealSpecDecorator:CreateItemFromModelVisualizableSpecDecorator()
-		return self.equippableSpecDecorator:CreateItemFromModelVisualizableSpecDecorator()
-	end
-	function HealSpecDecorator:CreateItemFromItemSpec()
-		return self.equippableSpecDecorator:CreateItemFromItemSpec()
-	end
 	function HealSpecDecorator:GetItemName()
 		return self.equippableSpecDecorator:GetItemName()
 	end
@@ -36,11 +27,8 @@ do
 	function HealSpecDecorator:GetItemDescription()
 		return self.equippableSpecDecorator:GetItemDescription()
 	end
-	function HealSpecDecorator:CreateItemFromHasHealSpecDecorator()
-		return self:CreateItemFromSpec()
-	end
 	function HealSpecDecorator:CreateItemFromSpec()
-		return HasHeal.new(self:CreateItemFromEquippableSpecDecorator(), self)
+		return HasHeal.new(self.equippableSpecDecorator:CreateItemFromSpec(), self)
 	end
 end
 return {

@@ -1,34 +1,24 @@
-import { Equippable } from "server/ItemClasses/Equippable";
+import { Equippable, IEquippable } from "server/ItemClasses/Equippable";
 import { IItem } from "server/ItemClasses/Item";
-import { ModelVisualizable } from "server/ItemClasses/ModelVisualizable";
+import { IModelVisualizable, ModelVisualizable } from "server/ItemClasses/ModelVisualizable";
 import { IModelVisualizableSpec } from "./ModelVisualizableSpecDecorator";
 
+
+
 export interface IEquippableSpecDecorator extends IModelVisualizableSpec {
-    CreateItemFromEquippableSpecDecorator(): Equippable;
+    CreateItemFromSpec(): IEquippable;
 }
 
 export class EquippableSpecDecorator implements IEquippableSpecDecorator {
 
-    modelVisualizableSpec: IModelVisualizableSpec;
+    private modelVisualizableSpec: IEquippableSpecDecorator;
 
-    constructor(modelVisualizableSpec: IModelVisualizableSpec) {
+    constructor(modelVisualizableSpec: IEquippableSpecDecorator) {
         this.modelVisualizableSpec = modelVisualizableSpec;
     }
 
-    CreateItemFromSpec(): Equippable {
-        return this.CreateItemFromEquippableSpecDecorator();
-    }
-
-    CreateItemFromModelVisualizableSpecDecorator(): ModelVisualizable {
-        return this.modelVisualizableSpec.CreateItemFromModelVisualizableSpecDecorator();
-    }
-
-    CreateItemFromEquippableSpecDecorator(): Equippable {
-        return new Equippable(this.CreateItemFromModelVisualizableSpecDecorator(), this);
-    }
-
-    CreateItemFromItemSpec(): IItem {
-        return this.modelVisualizableSpec.CreateItemFromItemSpec();
+    CreateItemFromSpec(): IEquippable {
+        return new Equippable(this.CreateItemFromSpec(), this);
     }
 
     GetItemName(): string {

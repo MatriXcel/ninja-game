@@ -1,4 +1,4 @@
-import { Equippable } from "server/ItemClasses/Equippable";
+import { Equippable, IEquippable } from "server/ItemClasses/Equippable";
 import { IItem, Item } from "server/ItemClasses/Item";
 import { ModelVisualizable } from "server/ItemClasses/ModelVisualizable";
 import { EquippableSpecDecorator, IEquippableSpecDecorator } from "./EquippableSpecDecorator";
@@ -7,31 +7,21 @@ import { IModelVisualizableSpec, ModelVisualizableSpecDecorator } from "./ModelV
 
 
 export interface IEquippableSpec extends IEquippableSpecDecorator {
-    CreateItemFromEquippableSpec(): Equippable;
 }
 
 export class EquippableSpec implements IEquippableSpec {
-    equippableSpecDecorator: IEquippableSpecDecorator;
+
+    private equippableSpecDecorator: IEquippableSpecDecorator;
 
     constructor(model: Model, itemName: string, itemDesc: string, maximumStacks: number, iconID?: string) {
+
         this.equippableSpecDecorator = new EquippableSpecDecorator(
             new ModelVisualizableSpecDecorator(
                 new ItemSpec(itemName, itemDesc, maximumStacks, iconID),
                 model
             )
         )
-    }
 
-    CreateItemFromEquippableSpecDecorator(): Equippable {
-        return this.equippableSpecDecorator.CreateItemFromEquippableSpecDecorator();
-    }
-
-    CreateItemFromModelVisualizableSpecDecorator(): ModelVisualizable {
-        return this.equippableSpecDecorator.CreateItemFromModelVisualizableSpecDecorator();
-    }
-
-    CreateItemFromItemSpec(): IItem {
-        return this.equippableSpecDecorator.CreateItemFromItemSpec();
     }
 
     GetItemName(): string {
@@ -46,11 +36,7 @@ export class EquippableSpec implements IEquippableSpec {
         return this.equippableSpecDecorator.GetItemDescription();
     }
 
-    CreateItemFromEquippableSpec(): Equippable {
-        return this.CreateItemFromSpec();
-    }
-
-    CreateItemFromSpec(): Equippable {
-        return new Equippable(this.CreateItemFromEquippableSpecDecorator(), this);
+    CreateItemFromSpec(): IEquippable {
+        return this.equippableSpecDecorator.CreateItemFromSpec();
     }
 }

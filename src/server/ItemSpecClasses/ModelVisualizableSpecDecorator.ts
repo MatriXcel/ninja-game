@@ -1,10 +1,14 @@
+import { IEquippable } from "server/ItemClasses/Equippable";
 import { IItem, Item } from "server/ItemClasses/Item";
-import { ModelVisualizable } from "server/ItemClasses/ModelVisualizable";
+import { IModelVisualizable, ModelVisualizable } from "server/ItemClasses/ModelVisualizable";
 import { EquippableSpec } from "./EquippableSpec";
+import { HealSpecDecorator } from "./HealSpecDecorator";
 import { IItemSpec, ItemSpec } from "./ItemSpec";
 
+
+
 export interface IModelVisualizableSpec extends IItemSpec {
-    CreateItemFromModelVisualizableSpecDecorator(): ModelVisualizable;
+    CreateItemFromSpec(): IModelVisualizable;
 }
 
 export class ModelVisualizableSpecDecorator implements IModelVisualizableSpec {
@@ -15,10 +19,6 @@ export class ModelVisualizableSpecDecorator implements IModelVisualizableSpec {
     constructor(itemSpec: IItemSpec, model: Model) {
         this.itemSpec = itemSpec;
         this.model = model;
-    }
-
-    CreateItemFromItemSpec(): IItem {
-        return this.itemSpec.CreateItemFromItemSpec();
     }
 
     GetItemID(): number {
@@ -33,11 +33,7 @@ export class ModelVisualizableSpecDecorator implements IModelVisualizableSpec {
         return this.itemSpec.GetItemName();
     }
 
-    CreateItemFromModelVisualizableSpecDecorator(): ModelVisualizable {
-        return this.CreateItemFromSpec();
-    }
-
-    CreateItemFromSpec(): ModelVisualizable {
-        return new ModelVisualizable(this.CreateItemFromItemSpec(), this);
+    CreateItemFromSpec(): IModelVisualizable {
+        return new ModelVisualizable(this.itemSpec.CreateItemFromSpec(), this);
     }
 }
