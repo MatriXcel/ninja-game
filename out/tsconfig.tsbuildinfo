@@ -89,6 +89,10 @@
         "version": "be323ec88cd75ae95bd8ff19f30c691ba824bd9364472004f527ff75b9e047c4",
         "affectsGlobalScope": false
       },
+      "../src/server/effects/rawdamageeffect.ts": {
+        "version": "7e2dcd987acf15577925e7e7d9c0b297f798fbf76721b50f9627d7f6e2d1c2c1",
+        "affectsGlobalScope": false
+      },
       "../node_modules/@rbxts/types/include/generated/enums.d.ts": {
         "version": "241c7e8a852e719c36fa268158d428d822e9d4d330b0adc8451ab942f279adba",
         "affectsGlobalScope": true
@@ -257,6 +261,11 @@
       ],
       "../src/server/attributeclasses/rawbonus.ts": [
         "../src/server/attributeclasses/baseattribute.ts"
+      ],
+      "../src/server/effects/rawdamageeffect.ts": [
+        "../src/server/attributeclasses/attribute.ts",
+        "../src/server/attributeclasses/rawbonus.ts",
+        "../src/server/effects/ieffect.ts"
       ],
       "../src/server/effects/rawhealeffect.ts": [
         "../src/server/attributeclasses/attribute.ts",

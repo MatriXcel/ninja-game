@@ -2,11 +2,11 @@ import { Attribute } from "server/AttributeClasses/Attribute";
 import { RawBonus } from "server/AttributeClasses/RawBonus";
 import { IEffect } from "./IEffect";
 
-export class RawHealEffect implements IEffect {
-    healBuff: RawBonus;
+export class HealEffect implements IEffect {
+    healAmount: number;
 
-    constructor(healBuff: RawBonus) {
-        this.healBuff = healBuff;
+    constructor(healAmount: number) {
+        this.healAmount = healAmount;
     }
 
     ExecuteEffect(character: any) {
@@ -14,6 +14,6 @@ export class RawHealEffect implements IEffect {
     }
 
     GetDescription(): string {
-        return '+${this.healBuff.GetValue()} Health';
+        return '+${this.healAmount} Health';
     }
 }
