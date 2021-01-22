@@ -1,6 +1,6 @@
-import { RawHealEffect } from "server/Effects/RawHealEffect";
+import { HealEffect } from "server/Effects/HealEffect";
 import { Equippable, IEquippable } from "server/ItemClasses/Equippable";
-import { HasHeal } from "server/ItemClasses/HasHeal";
+import { HasHealEffect } from "server/ItemClasses/HasHealEffect";
 import { IItem, Item } from "server/ItemClasses/Item";
 import { ModelVisualizable } from "server/ItemClasses/ModelVisualizable";
 import { EquippableSpec, IEquippableSpec } from "./EquippableSpec";
@@ -9,13 +9,17 @@ import { IEquippableSpecDecorator } from "./EquippableSpecDecorator";
 
 export class HealSpecDecorator implements IEquippableSpecDecorator {
 
-    private healEffect: RawHealEffect;
+    private healEffect: HealEffect;
     private equippableSpecDecorator: IEquippableSpecDecorator;
 
 
-    constructor(equippableSpecDecorator: IEquippableSpecDecorator, healEffect: RawHealEffect) {
+    constructor(equippableSpecDecorator: IEquippableSpecDecorator, healEffect: HealEffect) {
         this.equippableSpecDecorator = equippableSpecDecorator;
         this.healEffect = healEffect;
+    }
+
+    GetMaximumStacks(): number {
+        return this.equippableSpecDecorator.GetMaximumStacks();
     }
 
     GetItemName(): string {
@@ -30,7 +34,7 @@ export class HealSpecDecorator implements IEquippableSpecDecorator {
         return this.equippableSpecDecorator.GetItemDescription();
     }
 
-    CreateItemFromSpec(): HasHeal {
-        return new HasHeal(this.equippableSpecDecorator.CreateItemFromSpec(), this);
+    CreateItemFromSpec(): HasHealEffect {
+        return new HasHealEffect(this.equippableSpecDecorator.CreateItemFromSpec(), this);
     }
 }

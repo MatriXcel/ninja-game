@@ -1,7 +1,7 @@
 import { Equippable, IEquippable } from "server/ItemClasses/Equippable";
 import { IItem } from "server/ItemClasses/Item";
 import { IModelVisualizable, ModelVisualizable } from "server/ItemClasses/ModelVisualizable";
-import { IModelVisualizableSpec } from "./ModelVisualizableSpecDecorator";
+import { IModelVisualizableSpec, ModelVisualizableSpecDecorator } from "./ModelVisualizableSpecDecorator";
 
 
 
@@ -15,6 +15,9 @@ export class EquippableSpecDecorator implements IEquippableSpecDecorator {
 
     constructor(modelVisualizableSpec: IEquippableSpecDecorator) {
         this.modelVisualizableSpec = modelVisualizableSpec;
+    }
+    GetMaximumStacks(): number {
+        return this.modelVisualizableSpec.GetMaximumStacks();
     }
 
     CreateItemFromSpec(): IEquippable {

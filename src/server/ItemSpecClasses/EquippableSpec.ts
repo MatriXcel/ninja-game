@@ -23,6 +23,9 @@ export class EquippableSpec implements IEquippableSpec {
         )
 
     }
+    GetMaximumStacks(): number {
+        return this.equippableSpecDecorator.GetMaximumStacks();
+    }
 
     GetItemName(): string {
         return this.equippableSpecDecorator.GetItemName();

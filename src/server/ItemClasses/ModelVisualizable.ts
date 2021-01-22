@@ -14,4 +14,20 @@ export class ModelVisualizable implements IModelVisualizable {
         this.item = item;
         this.modelVisualizableSpecDecorator = modelVisualizableSpecDecorator;
     }
+
+    GetItemName(): string {
+        return this.item.GetItemName();
+    }
+
+    GetItemID(): number {
+        return this.item.GetItemID();
+    }
+
+    GetItemDescription(): string {
+        return this.item.GetItemDescription();
+    }
+
+    GetMaximumStacks(): number {
+        return this.item.GetMaximumStacks();
+    }
 }

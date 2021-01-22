@@ -15,10 +15,13 @@ export class ModelVisualizableSpecDecorator implements IModelVisualizableSpec {
     private itemSpec: IItemSpec;
     private model: Model;
 
-
     constructor(itemSpec: IItemSpec, model: Model) {
         this.itemSpec = itemSpec;
         this.model = model;
+    }
+
+    GetMaximumStacks(): number {
+        return this.itemSpec.GetMaximumStacks();
     }
 
     GetItemID(): number {

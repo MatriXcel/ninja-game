@@ -1,6 +1,6 @@
 -- Compiled with roblox-ts v1.0.0-beta.14
 local TS = require(game:GetService("ReplicatedStorage"):WaitForChild("rbxts_include"):WaitForChild("RuntimeLib"))
-local HasHeal = TS.import(script, game:GetService("ServerScriptService"), "TS", "ItemClasses", "HasHeal").HasHeal
+local HasHealEffect = TS.import(script, game:GetService("ServerScriptService"), "TS", "ItemClasses", "HasHealEffect").HasHealEffect
 local HealSpecDecorator
 do
 	HealSpecDecorator = setmetatable({}, {
@@ -28,7 +28,7 @@ do
 		return self.equippableSpecDecorator:GetItemDescription()
 	end
 	function HealSpecDecorator:CreateItemFromSpec()
-		return HasHeal.new(self.equippableSpecDecorator:CreateItemFromSpec(), self)
+		return HasHealEffect.new(self.equippableSpecDecorator:CreateItemFromSpec(), self)
 	end
 end
 return {

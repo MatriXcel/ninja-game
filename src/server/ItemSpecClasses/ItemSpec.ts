@@ -6,6 +6,7 @@ export interface IItemSpec {
     GetItemName(): string;
     GetItemID(): number;
     GetItemDescription(): string;
+    GetMaximumStacks(): number;
     CreateItemFromSpec(): IItem;
 }
 
@@ -27,6 +28,10 @@ export class ItemSpec implements IItemSpec {
 
     CreateItemFromSpec(): IItem {
         return new Item(this);
+    }
+
+    GetMaximumStacks() {
+        return this.maximumStacks;
     }
 
     GetItemName() {

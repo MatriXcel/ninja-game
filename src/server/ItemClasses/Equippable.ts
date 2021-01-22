@@ -17,4 +17,17 @@ export class Equippable implements IModelVisualizable {
         this.equippableSpecDecorator = equippableSpecDecorator;
         this.modelVisualizable = modelVisualizable;
     }
+    GetItemName(): string {
+        return this.modelVisualizable.GetItemName();
+    }
+    GetItemID(): number {
+        return this.modelVisualizable.GetItemID();
+    }
+    GetItemDescription(): string {
+        return this.modelVisualizable.GetItemDescription();
+    }
+
+    GetMaximumStacks(): number {
+        return this.modelVisualizable.GetMaximumStacks();
+    }
 }
