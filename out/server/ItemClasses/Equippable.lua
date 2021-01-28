@@ -16,6 +16,24 @@ do
 		self.equippableSpecDecorator = equippableSpecDecorator
 		self.modelVisualizable = modelVisualizable
 	end
+	function Equippable:GetIconID()
+		return self.modelVisualizable:GetIconID()
+	end
+	function Equippable:Accept(visitor)
+		visitor:visitModelVisualizable(self)
+	end
+	function Equippable:GetItemName()
+		return self.modelVisualizable:GetItemName()
+	end
+	function Equippable:GetItemID()
+		return self.modelVisualizable:GetItemID()
+	end
+	function Equippable:GetItemDescription()
+		return self.modelVisualizable:GetItemDescription()
+	end
+	function Equippable:GetMaximumStacks()
+		return self.modelVisualizable:GetMaximumStacks()
+	end
 end
 return {
 	Equippable = Equippable,

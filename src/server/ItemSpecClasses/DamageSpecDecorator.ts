@@ -2,8 +2,12 @@ import { DamageEffect } from "server/Effects/DamageEffect";
 import { IEquippable } from "server/ItemClasses/Equippable";
 import { HasDamageEffect } from "server/ItemClasses/HasDamageEffect";
 import { IEquippableSpecDecorator } from "./EquippableSpecDecorator";
+import { IEffectSpecDecorator } from "./IEffectSpecDecorator";
 
-export class DamageSpecDecorator implements IEquippableSpecDecorator {
+export interface IDamageSpecDecorator extends IEffectSpecDecorator {
+}
+
+export class DamageSpecDecorator implements IDamageSpecDecorator {
 
     private equippableSpecDecorator: IEquippableSpecDecorator;
     private damageEffect: DamageEffect;
@@ -11,6 +15,18 @@ export class DamageSpecDecorator implements IEquippableSpecDecorator {
     constructor(equippableSpecDecorator: IEquippableSpecDecorator, damageEffect: DamageEffect) {
         this.equippableSpecDecorator = equippableSpecDecorator;
         this.damageEffect = damageEffect;
+    }
+
+    GetIconID(): string | undefined {
+        return this.equippableSpecDecorator.GetIconID();
+    }
+
+    GetEffectDescription(): string {
+        return this.damageEffect.GetDescription();
+    }
+
+    GetHealEffect(): DamageEffect {
+        return this.damageEffect;
     }
 
     GetMaximumStacks(): number {

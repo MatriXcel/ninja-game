@@ -1,14 +1,31 @@
+import { HealEffect } from "server/Effects/HealEffect";
 import { EquippableSpec } from "server/ItemSpecClasses/EquippableSpec";
-import { HealSpecDecorator } from "server/ItemSpecClasses/HealSpecDecorator";
+import { HealSpecDecorator, IHealSpecDecorator } from "server/ItemSpecClasses/HealSpecDecorator";
+import { IItemVisitor } from "server/InventoryClasses/ClientSlotInfoExtractor";
 import { IEquippable } from "./Equippable";
+import { IHasEffect } from "./IHasEffect";
 
-export class HasHealEffect implements IEquippable {
+export interface IHasHealEffect extends IHasEffect {
+}
+
+export class HasHealEffect implements IHasHealEffect {
+
     private equippable: IEquippable;
-    private healSpecDecorator: HealSpecDecorator;
+    private healSpecDecorator: IHealSpecDecorator;
 
-    constructor(equippable: IEquippable, healSpecDecorator: HealSpecDecorator) {
+    constructor(equippable: IEquippable, healSpecDecorator: IHealSpecDecorator) {
         this.equippable = equippable;
         this.healSpecDecorator = healSpecDecorator;
+    }
+    GetIconID(): string | undefined {
+        return this.equippable.GetIconID();
+    }
+    GetEffectDescription(): string {
+        return this.healSpecDecorator.GetEffectDescription();
+    }
+
+    Accept(visitor: IItemVisitor): void {
+        visitor.visitHasEffectItem(this);
     }
 
     GetItemName(): string {

@@ -22,8 +22,14 @@ do
 		self.id = ItemSpec.ID
 		self.itemDesc = itemDesc
 	end
+	function ItemSpec:GetIconID()
+		return self.iconID
+	end
 	function ItemSpec:CreateItemFromSpec()
 		return Item.new(self)
+	end
+	function ItemSpec:GetMaximumStacks()
+		return self.maximumStacks
 	end
 	function ItemSpec:GetItemName()
 		return self.itemName
@@ -34,6 +40,7 @@ do
 	function ItemSpec:GetItemDescription()
 		return self.itemDesc
 	end
+	ItemSpec.ID = 0
 end
 return {
 	ItemSpec = ItemSpec,

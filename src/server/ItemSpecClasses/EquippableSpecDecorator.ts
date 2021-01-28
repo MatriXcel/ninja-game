@@ -11,17 +11,21 @@ export interface IEquippableSpecDecorator extends IModelVisualizableSpec {
 
 export class EquippableSpecDecorator implements IEquippableSpecDecorator {
 
-    private modelVisualizableSpec: IEquippableSpecDecorator;
+    private modelVisualizableSpec: IModelVisualizableSpec;
 
-    constructor(modelVisualizableSpec: IEquippableSpecDecorator) {
+    constructor(modelVisualizableSpec: IModelVisualizableSpec) {
         this.modelVisualizableSpec = modelVisualizableSpec;
+    }
+
+    GetIconID(): string | undefined {
+        return this.modelVisualizableSpec.GetIconID();
     }
     GetMaximumStacks(): number {
         return this.modelVisualizableSpec.GetMaximumStacks();
     }
 
     CreateItemFromSpec(): IEquippable {
-        return new Equippable(this.CreateItemFromSpec(), this);
+        return new Equippable(this.modelVisualizableSpec.CreateItemFromSpec(), this);
     }
 
     GetItemName(): string {

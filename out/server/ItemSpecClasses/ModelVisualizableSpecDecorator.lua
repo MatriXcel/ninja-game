@@ -18,6 +18,12 @@ do
 		self.itemSpec = itemSpec
 		self.model = model
 	end
+	function ModelVisualizableSpecDecorator:GetIconID()
+		return self.itemSpec:GetIconID()
+	end
+	function ModelVisualizableSpecDecorator:GetMaximumStacks()
+		return self.itemSpec:GetMaximumStacks()
+	end
 	function ModelVisualizableSpecDecorator:GetItemID()
 		return self.itemSpec:GetItemID()
 	end

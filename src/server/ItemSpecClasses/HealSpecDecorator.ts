@@ -5,9 +5,12 @@ import { IItem, Item } from "server/ItemClasses/Item";
 import { ModelVisualizable } from "server/ItemClasses/ModelVisualizable";
 import { EquippableSpec, IEquippableSpec } from "./EquippableSpec";
 import { IEquippableSpecDecorator } from "./EquippableSpecDecorator";
+import { IEffectSpecDecorator } from "./IEffectSpecDecorator";
 
+export interface IHealSpecDecorator extends IEffectSpecDecorator {
+}
 
-export class HealSpecDecorator implements IEquippableSpecDecorator {
+export class HealSpecDecorator implements IHealSpecDecorator {
 
     private healEffect: HealEffect;
     private equippableSpecDecorator: IEquippableSpecDecorator;
@@ -16,6 +19,14 @@ export class HealSpecDecorator implements IEquippableSpecDecorator {
     constructor(equippableSpecDecorator: IEquippableSpecDecorator, healEffect: HealEffect) {
         this.equippableSpecDecorator = equippableSpecDecorator;
         this.healEffect = healEffect;
+    }
+
+    GetIconID(): string | undefined {
+        return this.equippableSpecDecorator.GetIconID();
+    }
+
+    GetEffectDescription(): string {
+        return this.healEffect.GetDescription();
     }
 
     GetMaximumStacks(): number {

@@ -16,6 +16,24 @@ do
 		self.item = item
 		self.modelVisualizableSpecDecorator = modelVisualizableSpecDecorator
 	end
+	function ModelVisualizable:GetIconID()
+		return self.modelVisualizableSpecDecorator:GetIconID()
+	end
+	function ModelVisualizable:Accept(visitor)
+		visitor:visitModelVisualizable(self)
+	end
+	function ModelVisualizable:GetItemName()
+		return self.item:GetItemName()
+	end
+	function ModelVisualizable:GetItemID()
+		return self.item:GetItemID()
+	end
+	function ModelVisualizable:GetItemDescription()
+		return self.item:GetItemDescription()
+	end
+	function ModelVisualizable:GetMaximumStacks()
+		return self.item:GetMaximumStacks()
+	end
 end
 return {
 	ModelVisualizable = ModelVisualizable,

@@ -17,8 +17,14 @@ do
 	function EquippableSpecDecorator:constructor(modelVisualizableSpec)
 		self.modelVisualizableSpec = modelVisualizableSpec
 	end
+	function EquippableSpecDecorator:GetIconID()
+		return self.modelVisualizableSpec:GetIconID()
+	end
+	function EquippableSpecDecorator:GetMaximumStacks()
+		return self.modelVisualizableSpec:GetMaximumStacks()
+	end
 	function EquippableSpecDecorator:CreateItemFromSpec()
-		return Equippable.new(self:CreateItemFromSpec(), self)
+		return Equippable.new(self.modelVisualizableSpec:CreateItemFromSpec(), self)
 	end
 	function EquippableSpecDecorator:GetItemName()
 		return self.modelVisualizableSpec:GetItemName()

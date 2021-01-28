@@ -4,7 +4,8 @@ import { EquippableSpec } from "./ItemSpecClasses/EquippableSpec";
 import { IItemSpec } from "./ItemSpecClasses/ItemSpec";
 
 export class ItemSpecOracle {
-    itemSpecDatabase: IItemSpec[];
+    private itemSpecDatabase: IItemSpec[];
+    private static instance: ItemSpecOracle;
 
     constructor() {
         this.itemSpecDatabase = [
@@ -12,31 +13,43 @@ export class ItemSpecOracle {
             new DamageSpecDecorator(
                 new EquippableSpec(
                     new Instance("Model"),
-                    "Holy Sword",
+                    "Warrior Sword",
                     "a holy sword of the paladins",
                     20
                 ),
                 new DamageEffect(10)
             ),
-
         ];
     }
 
-    GetSpecByName(itemName: string): IItemSpec | null {
-        this.itemSpecDatabase.forEach(item => {
-            if (item.GetItemName() == itemName)
-                return item;
-        })
+    public static GetInstance(): ItemSpecOracle {
+        if (ItemSpecOracle.instance === undefined) {
+            ItemSpecOracle.instance = new ItemSpecOracle();
+        }
 
-        return null;
+        return ItemSpecOracle.instance;
     }
 
-    GetSpecByID(itemID: number): IItemSpec | null {
+    GetSpecByName(itemName: string): IItemSpec | undefined {
+
+        let finalItem: IItemSpec | undefined = undefined;
+
         this.itemSpecDatabase.forEach(item => {
-            if (item.GetItemID() == itemID)
+            if (item.GetItemName() === itemName) {
+                finalItem = item;
+                return;
+            }
+        })
+
+        return finalItem;
+    }
+
+    GetSpecByID(itemID: number): IItemSpec | undefined {
+        this.itemSpecDatabase.forEach(item => {
+            if (item.GetItemID() === itemID)
                 return item;
         })
 
-        return null;
+        return undefined;
     }
 }

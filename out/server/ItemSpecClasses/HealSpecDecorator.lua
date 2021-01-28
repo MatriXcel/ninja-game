@@ -18,6 +18,15 @@ do
 		self.equippableSpecDecorator = equippableSpecDecorator
 		self.healEffect = healEffect
 	end
+	function HealSpecDecorator:GetIconID()
+		return self.equippableSpecDecorator:GetIconID()
+	end
+	function HealSpecDecorator:GetEffectDescription()
+		return self.healEffect:GetDescription()
+	end
+	function HealSpecDecorator:GetMaximumStacks()
+		return self.equippableSpecDecorator:GetMaximumStacks()
+	end
 	function HealSpecDecorator:GetItemName()
 		return self.equippableSpecDecorator:GetItemName()
 	end

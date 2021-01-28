@@ -18,6 +18,18 @@ do
 		self.equippableSpecDecorator = equippableSpecDecorator
 		self.damageEffect = damageEffect
 	end
+	function DamageSpecDecorator:GetIconID()
+		return self.equippableSpecDecorator:GetIconID()
+	end
+	function DamageSpecDecorator:GetEffectDescription()
+		return self.damageEffect:GetDescription()
+	end
+	function DamageSpecDecorator:GetHealEffect()
+		return self.damageEffect
+	end
+	function DamageSpecDecorator:GetMaximumStacks()
+		return self.equippableSpecDecorator:GetMaximumStacks()
+	end
 	function DamageSpecDecorator:CreateItemFromSpec()
 		return HasDamageEffect.new(self.equippableSpecDecorator:CreateItemFromSpec(), self)
 	end

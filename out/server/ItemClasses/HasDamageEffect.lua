@@ -16,6 +16,27 @@ do
 		self.equippable = equippable
 		self.damageSpecDecorator = damageSpecDecorator
 	end
+	function HasDamageEffect:GetIconID()
+		return self.equippable:GetIconID()
+	end
+	function HasDamageEffect:GetEffectDescription()
+		return self.damageSpecDecorator:GetEffectDescription()
+	end
+	function HasDamageEffect:Accept(visitor)
+		visitor:visitHasEffectItem(self)
+	end
+	function HasDamageEffect:GetItemName()
+		return self.equippable:GetItemName()
+	end
+	function HasDamageEffect:GetItemID()
+		return self.equippable:GetItemID()
+	end
+	function HasDamageEffect:GetItemDescription()
+		return self.equippable:GetItemDescription()
+	end
+	function HasDamageEffect:GetMaximumStacks()
+		return self.equippable:GetMaximumStacks()
+	end
 end
 return {
 	HasDamageEffect = HasDamageEffect,

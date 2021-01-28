@@ -1,13 +1,30 @@
-import { DamageSpecDecorator } from "server/ItemSpecClasses/DamageSpecDecorator";
+import { DamageEffect } from "server/Effects/DamageEffect";
+import { DamageSpecDecorator, IDamageSpecDecorator } from "server/ItemSpecClasses/DamageSpecDecorator";
+import { IItemVisitor } from "server/InventoryClasses/ClientSlotInfoExtractor";
 import { Equippable, IEquippable } from "./Equippable";
+import { IHasEffect } from "./IHasEffect";
 
-export class HasDamageEffect implements IEquippable {
+export interface IHasDamageEffect extends IHasEffect {
+}
+
+export class HasDamageEffect implements IHasDamageEffect {
     equippable: IEquippable;
-    damageSpecDecorator: DamageSpecDecorator;
+    damageSpecDecorator: IDamageSpecDecorator;
 
-    constructor(equippable: IEquippable, damageSpecDecorator: DamageSpecDecorator) {
+    constructor(equippable: IEquippable, damageSpecDecorator: IDamageSpecDecorator) {
         this.equippable = equippable;
         this.damageSpecDecorator = damageSpecDecorator;
+    }
+    GetIconID(): string | undefined {
+        return this.equippable.GetIconID();
+    }
+
+    GetEffectDescription(): string {
+        return this.damageSpecDecorator.GetEffectDescription();
+    }
+
+    Accept(visitor: IItemVisitor): void {
+        visitor.visitHasEffectItem(this);
     }
 
     GetItemName(): string {

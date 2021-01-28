@@ -19,6 +19,12 @@ do
 	function EquippableSpec:constructor(model, itemName, itemDesc, maximumStacks, iconID)
 		self.equippableSpecDecorator = EquippableSpecDecorator.new(ModelVisualizableSpecDecorator.new(ItemSpec.new(itemName, itemDesc, maximumStacks, iconID), model))
 	end
+	function EquippableSpec:GetIconID()
+		return self.equippableSpecDecorator:GetIconID()
+	end
+	function EquippableSpec:GetMaximumStacks()
+		return self.equippableSpecDecorator:GetMaximumStacks()
+	end
 	function EquippableSpec:GetItemName()
 		return self.equippableSpecDecorator:GetItemName()
 	end

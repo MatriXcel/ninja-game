@@ -19,6 +19,9 @@ export class ModelVisualizableSpecDecorator implements IModelVisualizableSpec {
         this.itemSpec = itemSpec;
         this.model = model;
     }
+    GetIconID(): string | undefined {
+        return this.itemSpec.GetIconID();
+    }
 
     GetMaximumStacks(): number {
         return this.itemSpec.GetMaximumStacks();
