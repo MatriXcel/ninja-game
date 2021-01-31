@@ -3,6 +3,7 @@ local TS = require(game:GetService("ReplicatedStorage"):WaitForChild("rbxts_incl
 local DamageEffect = TS.import(script, game:GetService("ServerScriptService"), "TS", "Effects", "DamageEffect").DamageEffect
 local DamageSpecDecorator = TS.import(script, game:GetService("ServerScriptService"), "TS", "ItemSpecClasses", "DamageSpecDecorator").DamageSpecDecorator
 local EquippableSpec = TS.import(script, game:GetService("ServerScriptService"), "TS", "ItemSpecClasses", "EquippableSpec").EquippableSpec
+local ItemSpec = TS.import(script, game:GetService("ServerScriptService"), "TS", "ItemSpecClasses", "ItemSpec").ItemSpec
 local ItemSpecOracle
 do
 	ItemSpecOracle = setmetatable({}, {
@@ -17,7 +18,7 @@ do
 		return self
 	end
 	function ItemSpecOracle:constructor()
-		self.itemSpecDatabase = { DamageSpecDecorator.new(EquippableSpec.new(Instance.new("Model"), "Warrior Sword", "a holy sword of the paladins", 20), DamageEffect.new(10)) }
+		self.itemSpecDatabase = { DamageSpecDecorator.new(EquippableSpec.new(Instance.new("Model"), "Warrior Sword", "a holy sword of the paladins", 20, "SwordIcon"), DamageEffect.new(10)), ItemSpec.new("Greater Healing Potion", "Heals the user", 4, "PotionIcon") }
 	end
 	function ItemSpecOracle:GetInstance()
 		if ItemSpecOracle.instance == nil then

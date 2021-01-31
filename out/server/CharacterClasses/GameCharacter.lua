@@ -23,7 +23,12 @@ do
 		if _0 ~= nil then
 			_0 = _0:CreateItemFromSpec()
 		end
-		self.inventory = Inventory.new({ _0 })
+		local _1 = itemSpecOracle:GetSpecByName("Warrior Sword")
+		if _1 ~= nil then
+			_1 = _1:CreateItemFromSpec()
+		end
+		self.inventory = Inventory.new({ _0, _1 })
+		-- this.inventory.AddItem(itemSpecOracle.GetSpecByName("Warrior Sword")?.CreateItemFromSpec() as IItem);
 	end
 	function GameCharacter:GetInventory()
 		return self.inventory

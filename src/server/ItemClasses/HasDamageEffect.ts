@@ -1,6 +1,6 @@
 import { DamageEffect } from "server/Effects/DamageEffect";
 import { DamageSpecDecorator, IDamageSpecDecorator } from "server/ItemSpecClasses/DamageSpecDecorator";
-import { IItemVisitor } from "server/InventoryClasses/ClientSlotInfoExtractor";
+import { IItemVisitor } from "server/InventoryClasses/ClientSlotInfo";
 import { Equippable, IEquippable } from "./Equippable";
 import { IHasEffect } from "./IHasEffect";
 
@@ -15,7 +15,7 @@ export class HasDamageEffect implements IHasDamageEffect {
         this.equippable = equippable;
         this.damageSpecDecorator = damageSpecDecorator;
     }
-    GetIconID(): string | undefined {
+    GetIconID(): string {
         return this.equippable.GetIconID();
     }
 

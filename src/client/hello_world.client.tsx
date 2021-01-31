@@ -1,4 +1,4 @@
-// import Roact from '@rbxts/roact';
+import Roact from '@rbxts/roact';
 import { Players } from '@rbxts/services';
 
 // const playerGui = Players.LocalPlayer.FindFirstChild("PlayerGui") as PlayerGui;

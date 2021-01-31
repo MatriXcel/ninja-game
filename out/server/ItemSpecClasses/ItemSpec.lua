@@ -15,6 +15,9 @@ do
 		return self
 	end
 	function ItemSpec:constructor(itemName, itemDesc, maximumStacks, iconID)
+		if iconID == nil then
+			iconID = "DefaultIcon"
+		end
 		self.itemName = itemName
 		self.maximumStacks = maximumStacks
 		self.iconID = iconID

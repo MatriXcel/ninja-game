@@ -2,16 +2,25 @@ import { IItem, Item } from "server/ItemClasses/Item";
 import { ItemSlot } from "./ItemSlot";
 
 export class Inventory {
-    slots: ItemSlot[];
-    maxSlots: number = 6;
+    private slots: ItemSlot[];
+    private maxSlots: number = 9;
+
+    OnSlotChanged: BindableEvent<{ (slotNum: number): void }>;
 
     constructor(startingItems: (IItem | undefined)[]) {
         this.slots = [];
 
-        for (let i = 0; i < this.maxSlots; i++)
+        for (let i = 0; i < this.maxSlots; i++) {
             this.slots[i] = new ItemSlot();
+        }
 
+        this.OnSlotChanged = new Instance("BindableEvent");
         this.SetStartingItems(startingItems);
+    }
+
+
+    GetSlots(): ItemSlot[] {
+        return this.slots;
     }
 
     SetStartingItems(startingItems: (IItem | undefined)[]) {
@@ -20,6 +29,12 @@ export class Inventory {
                 this.AddItem(startingItems[i] as IItem);
             }
         }
+
+
+    }
+
+    GetSlotAtIndex(index: number): ItemSlot {
+        return this.slots[index];
     }
 
     AddItem(item: IItem) {

@@ -1,7 +1,11 @@
+import { connect } from "@rbxts/roact-rodux";
 import { t } from "@rbxts/t"
 import { ClientSlotData } from "shared/ClientSlotData";
 import { GameCharacter } from "./CharacterClasses/GameCharacter";
-import { ClientSlotInfoExtractor } from "./InventoryClasses/ClientSlotInfoExtractor";
+import { ClientInventoryInfo } from "./InventoryClasses/ClientInventoryInfo";
+import { IItem } from "./ItemClasses/Item";
+import { ItemSpecOracle } from "./ItemSpecOracle";
+
 
 let gameCharacters: Record<string, GameCharacter> = {}
 let RS = game.GetService('ReplicatedStorage')
@@ -13,11 +17,13 @@ game.GetService('Players').PlayerAdded.Connect((player) => {
 
     let characterInventory = gameCharacters[player.UserId].GetInventory();
 
-    let clientInvData: ClientSlotData[] = [];
+    let clientInvInfo = new ClientInventoryInfo(characterInventory);
 
-    characterInventory.slots.forEach((slot) => {
-        clientInvData.push(new ClientSlotInfoExtractor(slot).GetSlotClientData());
+    clientInvInfo.OnInventorySlotInfoChanged.Connect((slotNum, slotInfo) => {
+        RS.RemoteEvents.ServerToClient.OnSlotChanged.FireClient(player, slotNum, slotInfo.GetSlotClientData());
     });
 
-    RS.RemoteEvents.ServerToClient.OnInventoryInit.FireClient(player, clientInvData);
+    wait(5);
+
+    RS.RemoteEvents.ServerToClient.OnInventoryInit.FireClient(player, clientInvInfo.GetSlotDatas());
 });

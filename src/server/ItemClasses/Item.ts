@@ -1,5 +1,5 @@
 import { IItemSpec, ItemSpec } from "server/ItemSpecClasses/ItemSpec";
-import { IItemVisitor } from "server/InventoryClasses/ClientSlotInfoExtractor";
+import { IItemVisitor } from "server/InventoryClasses/ClientSlotInfo";
 import { IModelVisualizable } from "./ModelVisualizable";
 
 export interface IItem {
@@ -7,7 +7,7 @@ export interface IItem {
     GetItemID(): number;
     GetItemDescription(): string;
     GetMaximumStacks(): number;
-    GetIconID(): string | undefined;
+    GetIconID(): string;
 
     Accept(visitor: IItemVisitor): void;
 }
@@ -18,7 +18,7 @@ export class Item implements IItem {
     constructor(itemSpec: IItemSpec) {
         this.itemSpec = itemSpec;
     }
-    GetIconID(): string | undefined {
+    GetIconID(): string {
         return this.itemSpec.GetIconID();
     }
 

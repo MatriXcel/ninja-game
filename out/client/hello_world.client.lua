@@ -1,5 +1,4 @@
 -- Compiled with roblox-ts v1.0.0-beta.14
--- import Roact from '@rbxts/roact';
 -- const playerGui = Players.LocalPlayer.FindFirstChild("PlayerGui") as PlayerGui;
 -- const element = (
 -- <screengui ResetOnSpawn={ false }>

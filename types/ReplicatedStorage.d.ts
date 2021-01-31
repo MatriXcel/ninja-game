@@ -5,8 +5,14 @@ interface ReplicatedStorage extends Instance {
 	};
 	RemoteEvents: Folder & {
 		ServerToClient: Folder & {
+			OnSlotChanged: RemoteEvent;
 			OnInventoryInit: RemoteEvent;
 		};
+	};
+	Icons: Folder & {
+		DefaultIcon: StringValue;
+		PotionIcon: StringValue;
+		SwordIcon: StringValue;
 	};
 	EffectFrame: Frame & {
 		EffectLabel: TextLabel;
@@ -79,7 +85,31 @@ interface ReplicatedStorage extends Instance {
 					LICENSE: StringValue;
 				};
 			};
+			["roact-rodux"]: Folder & {
+				out: ModuleScript & {
+					join: ModuleScript;
+					StoreProvider: ModuleScript;
+					Symbol: ModuleScript;
+					shallowEqual: ModuleScript;
+					getStore: ModuleScript;
+					storeKey: ModuleScript;
+					connect: ModuleScript;
+				};
+			};
 			services: ModuleScript;
+			rodux: Folder & {
+				rodux: Folder & {
+					lib: ModuleScript & {
+						thunkMiddleware: ModuleScript;
+						loggerMiddleware: ModuleScript;
+						combineReducers: ModuleScript;
+						NoYield: ModuleScript;
+						createReducer: ModuleScript;
+						Store: ModuleScript;
+						Signal: ModuleScript;
+					};
+				};
+			};
 			t: Folder & {
 				lib: Folder & {
 					ts: ModuleScript;

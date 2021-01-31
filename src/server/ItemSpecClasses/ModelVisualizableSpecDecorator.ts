@@ -19,7 +19,7 @@ export class ModelVisualizableSpecDecorator implements IModelVisualizableSpec {
         this.itemSpec = itemSpec;
         this.model = model;
     }
-    GetIconID(): string | undefined {
+    GetIconID(): string {
         return this.itemSpec.GetIconID();
     }
 

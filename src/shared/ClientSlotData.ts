@@ -2,6 +2,6 @@ export interface ClientSlotData {
     itemName: string;
     itemDesc: string;
     numStacks: number;
-    iconID?: string;
+    iconID: string;
     effects?: string[];
 }

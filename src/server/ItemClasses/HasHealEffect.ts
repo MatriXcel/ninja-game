@@ -1,7 +1,7 @@
 import { HealEffect } from "server/Effects/HealEffect";
 import { EquippableSpec } from "server/ItemSpecClasses/EquippableSpec";
 import { HealSpecDecorator, IHealSpecDecorator } from "server/ItemSpecClasses/HealSpecDecorator";
-import { IItemVisitor } from "server/InventoryClasses/ClientSlotInfoExtractor";
+import { IItemVisitor } from "server/InventoryClasses/ClientSlotInfo";
 import { IEquippable } from "./Equippable";
 import { IHasEffect } from "./IHasEffect";
 
@@ -17,7 +17,7 @@ export class HasHealEffect implements IHasHealEffect {
         this.equippable = equippable;
         this.healSpecDecorator = healSpecDecorator;
     }
-    GetIconID(): string | undefined {
+    GetIconID(): string {
         return this.equippable.GetIconID();
     }
     GetEffectDescription(): string {

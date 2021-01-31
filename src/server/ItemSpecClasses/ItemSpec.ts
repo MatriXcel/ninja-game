@@ -5,7 +5,7 @@ import { IItem, Item } from "server/ItemClasses/Item";
 export interface IItemSpec {
     GetItemName(): string;
     GetItemID(): number;
-    GetIconID(): string | undefined;
+    GetIconID(): string;
     GetItemDescription(): string;
     GetMaximumStacks(): number;
     CreateItemFromSpec(): IItem;
@@ -18,10 +18,10 @@ export class ItemSpec implements IItemSpec {
     private id: number;
     private itemName: string;
     private itemDesc: string;
-    private iconID?: string;
+    private iconID: string;
     private maximumStacks: number;
 
-    constructor(itemName: string, itemDesc: string, maximumStacks: number, iconID?: string) {
+    constructor(itemName: string, itemDesc: string, maximumStacks: number, iconID: string = "DefaultIcon") {
         this.itemName = itemName;
         this.maximumStacks = maximumStacks;
         this.iconID = iconID;
@@ -29,7 +29,7 @@ export class ItemSpec implements IItemSpec {
         this.itemDesc = itemDesc;
     }
 
-    GetIconID(): string | undefined {
+    GetIconID(): string {
         return this.iconID;
     }
 

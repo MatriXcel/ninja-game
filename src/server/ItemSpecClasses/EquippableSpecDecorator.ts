@@ -17,7 +17,7 @@ export class EquippableSpecDecorator implements IEquippableSpecDecorator {
         this.modelVisualizableSpec = modelVisualizableSpec;
     }
 
-    GetIconID(): string | undefined {
+    GetIconID(): string {
         return this.modelVisualizableSpec.GetIconID();
     }
     GetMaximumStacks(): number {

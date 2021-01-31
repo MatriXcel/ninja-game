@@ -1,12 +1,20 @@
+import Signal from "@rbxts/signal";
 import { IItem } from "server/ItemClasses/Item";
+import { SlotChangeType } from "shared/SlotChangeType";
+
 
 export class ItemSlot {
+
     private item?: IItem;
     private numStacks: number;
+
+    OnSlotChanged: Signal<{ (changeType: SlotChangeType): void }>;
 
     constructor(item?: IItem, numStacks: number = 0) {
         this.item = item;
         this.numStacks = numStacks;
+
+        this.OnSlotChanged = new Signal();
     }
 
     GetNumStacks() {
@@ -18,7 +26,14 @@ export class ItemSlot {
     }
 
     AddStack(numStacks: number = 1) {
+        if (numStacks === 0) return;
+
         this.numStacks += numStacks;
+
+        if (this.numStacks - numStacks === 0)
+            this.OnSlotChanged.Fire(SlotChangeType.ITEM_ADDED_ON_EMPTY);
+        else
+            this.OnSlotChanged.Fire(SlotChangeType.ITEM_ADDED);
     }
 
     GetItem(): IItem | undefined {

@@ -13,10 +13,6 @@
         "version": "e493ccf67db15cce84321be9a519a43245444a77545e631dee11391ef129fcf9",
         "affectsGlobalScope": false
       },
-      "../src/client/hello_world.client.tsx": {
-        "version": "57f7ebe2ec23c67dd5d7eb19e227903f6d412fd0642b2e0bce620e6e65874c2d",
-        "affectsGlobalScope": false
-      },
       "../node_modules/@rbxts/roact/internal.d.ts": {
         "version": "be669d9ff1319d4837e7d4e17bfe6e619bb3e67105d26a38cbd0535ad7f6c0ac",
         "affectsGlobalScope": true
@@ -25,16 +21,32 @@
         "version": "990133e46881ab4501759593932fb9875d2c02605018f4640f27c3c5122c286b",
         "affectsGlobalScope": true
       },
+      "../src/client/hello_world.client.tsx": {
+        "version": "abe911cbf475ba77a7dd481254dba28993b3b21259f9c8a2dc029ac29f5f7101",
+        "affectsGlobalScope": false
+      },
       "../src/shared/clientslotdata.ts": {
-        "version": "4d4ebf96fd3ef83a9cf77d1db8c694eb79e112c4e5cc465264222e87b363f186",
+        "version": "a1382a3f5a25f723fb74e4e646ce5bd4f2382bd856d2e5e1240738ffff7edcbf",
         "affectsGlobalScope": false
       },
       "../src/client/inventory.tsx": {
-        "version": "63f7c66af955fabf8ba6e5415437327e21cae7b9ad540d3b71f3d5f7844d6311",
+        "version": "cdbde27e5c916c6d0b7d1af2adfc975a196c484d9d552f2d8e4042dbcb7d7668",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@rbxts/rodux/index.d.ts": {
+        "version": "3c04ed1abfad8750dbbfd0c5acdaa745d7060d159e48e4779811be0ba05e852c",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@rbxts/roact-rodux/internal.d.ts": {
+        "version": "b03c8c596f63c5147f02fb31cdcb1151394d9206e5edef4a3caeddfb34252356",
+        "affectsGlobalScope": false
+      },
+      "../node_modules/@rbxts/roact-rodux/index.d.ts": {
+        "version": "7a9455edbaf4b23896ffb2a10f848ea039113e93ef64b81c82d85ef87e2b67f2",
         "affectsGlobalScope": false
       },
       "../src/client/inventory_docker.client.tsx": {
-        "version": "72194e98a2058ccf169c69222fbce5aba699d3ae929920728a5425273eca7c71",
+        "version": "5415082410089dd90faf3f1f6de052cf12b0bc23348a14138f003ec6aabe07a2",
         "affectsGlobalScope": false
       },
       "../src/shared/module.ts": {
@@ -73,40 +85,32 @@
         "version": "0ece1c63ad3909eb50f203a7103ce6ff82f8dea79d405976d29f3fad50df26f1",
         "affectsGlobalScope": false
       },
-      "../src/server/itemspecclasses/itemspec.ts": {
-        "version": "c38943314468361cd9f67b217fa0051c58a656f2605014215c2381e2c8ed334c",
+      "../node_modules/@rbxts/signal/index.d.ts": {
+        "version": "d2dd8aead195308f0b7655b999bfc1d64415476fb8b52d11a6044280e359e50c",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/slotchangetype.ts": {
+        "version": "bd573f5dad3a1d2815fb73d9395fe531d8cac11abdad53c70212a7403f0c5ad2",
         "affectsGlobalScope": false
       },
       "../src/server/inventoryclasses/itemslot.ts": {
-        "version": "0dae20f03190b59e1caea7b5060278a400e0d98ac88e109a4c1cadb27118b9f6",
-        "affectsGlobalScope": false
-      },
-      "../src/server/inventoryclasses/inventory.ts": {
-        "version": "6b48e60231b295c06733bfdee824b30be19b8cc6274425a06e6903fc74b96dc0",
-        "affectsGlobalScope": false
-      },
-      "../src/server/itemclasses/ihaseffect.ts": {
-        "version": "07f6ef8c1cecdb5bc2194bdc80b7e1404eb60f11836f7fd5cf35227c5e8c6696",
-        "affectsGlobalScope": false
-      },
-      "../src/server/itemclasses/hasdamageeffect.ts": {
-        "version": "a2980eb53f7ebb7d8ae21b4b3a8775ab58489c093c66d46761eb9a39bcc6935f",
+        "version": "080497c0955b4ff7644f2f48910d5c3ee0284fdc09624dc35e0a421bbef1726d",
         "affectsGlobalScope": false
       },
       "../src/server/effects/healeffect.ts": {
         "version": "c69e7ac4012bb187b4eae1645609a7f118e95755f58050ed536bf50e02f30697",
         "affectsGlobalScope": false
       },
-      "../src/server/itemspecclasses/modelvisualizablespecdecorator.ts": {
-        "version": "fbf4d97d910fc12ae3859e9e0e25e62c3fe4a86c880f75e2877211050edbadc4",
+      "../src/server/itemclasses/ihaseffect.ts": {
+        "version": "07f6ef8c1cecdb5bc2194bdc80b7e1404eb60f11836f7fd5cf35227c5e8c6696",
         "affectsGlobalScope": false
       },
-      "../src/server/itemclasses/modelvisualizable.ts": {
-        "version": "9e24e093bdda07d4cb36678764e4ae639ff415ce72b39037ffcae820c99ea63c",
+      "../src/server/itemclasses/hashealeffect.ts": {
+        "version": "9e4d3decaea345daf2c6c41e9653caeec9e64461f7c8855998a760a8832333e6",
         "affectsGlobalScope": false
       },
       "../src/server/itemspecclasses/equippablespecdecorator.ts": {
-        "version": "2a8ae1931598a727cc8baba9f2db4f7f1d92645c13f3d5349dba8e2a9a9097a9",
+        "version": "77e75533b6927b14032db6d46ab17200be134b72d96c1e6c5e4cd6b7ea9ea530",
         "affectsGlobalScope": false
       },
       "../src/server/itemspecclasses/ieffectspecdecorator.ts": {
@@ -114,47 +118,71 @@
         "affectsGlobalScope": false
       },
       "../src/server/itemspecclasses/healspecdecorator.ts": {
-        "version": "4e549322916c4e45dbbf6f86c6d27eae6540a2ecf793295c4ee4739c5c13124a",
+        "version": "4b70c81cd12397dbfb00f12a4aa5035c630566b870ca663ca1344fdfe576159f",
         "affectsGlobalScope": false
       },
-      "../src/server/itemclasses/hashealeffect.ts": {
-        "version": "96323202b54311713d7eddf119d5ebf58497abaf2c6726855c2787c1eb9a0702",
+      "../src/server/itemspecclasses/modelvisualizablespecdecorator.ts": {
+        "version": "665c4605aa5d0fd91c8c4ef76effef6bb4002ad297516cb0b8f17b79f5c4381d",
         "affectsGlobalScope": false
       },
-      "../src/server/inventoryclasses/clientslotinfoextractor.ts": {
-        "version": "aa646d32e220693b24773de80b893abce73bbc2cb86c0202d2e4ebfeea961570",
-        "affectsGlobalScope": false
-      },
-      "../src/server/itemclasses/item.ts": {
-        "version": "1995ef67311e1b98521d5490b21dccb657f24eed40fa1d88d16e747583d79752",
+      "../src/server/itemclasses/modelvisualizable.ts": {
+        "version": "e2ed6afdc658a50ee1d85a7e755125ce2d6b693fbb7579ab27614580c9aea2c4",
         "affectsGlobalScope": false
       },
       "../src/server/itemspecclasses/equippablespec.ts": {
-        "version": "32230ca68e835cd6a1ff21ce7bb93f7fc4c8531cea2907460047125203d4931e",
+        "version": "fca97c9363fde4396201c0eddc7c0094723e307b7897c67f7db5ed7b49d61b01",
         "affectsGlobalScope": false
       },
       "../src/server/itemclasses/equippable.ts": {
-        "version": "026333b22d5cf6117c0525c1903dea75184849294dea5393e1d508c397611e06",
+        "version": "e116421ad46668e978358747c4f2e0d796ac1c040c367fe91964e876ccd4ba51",
+        "affectsGlobalScope": false
+      },
+      "../src/server/inventoryclasses/clientslotinfo.ts": {
+        "version": "cc43e71467afee369d9721464f3ecdbbe84fc2eff8613b83558dc0843596651b",
+        "affectsGlobalScope": false
+      },
+      "../src/server/itemclasses/item.ts": {
+        "version": "c884618851d22caf9811b71e8d3983b304e263cde1ad66e875e4fa0c11802989",
+        "affectsGlobalScope": false
+      },
+      "../src/server/itemspecclasses/itemspec.ts": {
+        "version": "6337ca2c6fd8c05d3e22b024c2c56ad32b0b89e79d0ad164e90c699938b3a327",
+        "affectsGlobalScope": false
+      },
+      "../src/server/itemspecclasses/consumablespec.ts": {
+        "version": "be323ec88cd75ae95bd8ff19f30c691ba824bd9364472004f527ff75b9e047c4",
+        "affectsGlobalScope": false
+      },
+      "../src/server/itemclasses/hasdamageeffect.ts": {
+        "version": "6c090d402e37082e679a2a17c4cabc8cb0a98d31bc5243b61360b0e8eaaaf4de",
         "affectsGlobalScope": false
       },
       "../src/server/itemspecclasses/damagespecdecorator.ts": {
-        "version": "8f4185d3f28f8ec174c2f8edf296c432ded7e5ba26dc609355cef55d7bc31ee2",
+        "version": "cbbb1811ebaa67ca022b499312d0c6a148e45f043157abb6deeb2acae011ecaf",
         "affectsGlobalScope": false
       },
       "../src/server/itemspecoracle.ts": {
-        "version": "8d9784e895c4de69c6fb3b9db38335be202735ec5653fad5a8a050f74a558e2a",
+        "version": "32b8b7b0d46b655221af34b1a01ededd426a2fdc7806728c2d9bddf644f10926",
         "affectsGlobalScope": false
       },
       "../node_modules/@rbxts/t/lib/t.d.ts": {
         "version": "b394e2aabde1e211d8def4d6cd31598b2385160bd16ab5c10f81eec19c94aba2",
         "affectsGlobalScope": false
       },
+      "../src/server/inventoryclasses/inventory.ts": {
+        "version": "1d65d4649fd51852c557ecb1165942e11c518b36f4afe10bfdee0c33b3e36cee",
+        "affectsGlobalScope": false
+      },
       "../src/server/characterclasses/gamecharacter.ts": {
-        "version": "0a6066c66d4a094240fd7b9631598307c439a1dd0dac48715c8fc1230170052f",
+        "version": "5f4b7d309c926404393a5bc18601f82d68585a711a9d103d509094e45fe2731c",
+        "affectsGlobalScope": false
+      },
+      "../src/server/inventoryclasses/clientinventoryinfo.ts": {
+        "version": "9c03dfdc0ab781b542fe356d0dfdfb50ed30b9a9fbc9ed616509743529b31c8e",
         "affectsGlobalScope": false
       },
       "../src/server/docker.server.ts": {
-        "version": "5103ddb97fa8b2a65699c3a96747bc2ff149c2d6522b15c61fb2a24d055b038b",
+        "version": "b14cd422b9ebd998d620ee52c3c5a5e5df905a9ff09d90833055e00120bfee44",
         "affectsGlobalScope": false
       },
       "../src/server/main.server.ts": {
@@ -165,10 +193,6 @@
         "version": "a1b80aef71c03b0413bb1e587364da9c2fabdb58240b0f0027fbbe98dffabaa1",
         "affectsGlobalScope": false
       },
-      "../src/server/itemspecclasses/consumablespec.ts": {
-        "version": "be323ec88cd75ae95bd8ff19f30c691ba824bd9364472004f527ff75b9e047c4",
-        "affectsGlobalScope": false
-      },
       "../types/effectframe.d.ts": {
         "version": "fdee6ee6c938195a41f25df5d9bf75942d98aade14005dbddcacf404ae11140b",
         "affectsGlobalScope": true
@@ -177,8 +201,16 @@
         "version": "796abc2e7535ef174a86e6f39b5fece3a8be73d59c69869a995d08f47d33f951",
         "affectsGlobalScope": true
       },
+      "../types/oninventoryinit.d.ts": {
+        "version": "4c1abed588f633ae66143b02af7325d404d62dfa30c37615db9fd5306a29ddf8",
+        "affectsGlobalScope": true
+      },
+      "../types/onslotchanged.d.ts": {
+        "version": "0913e16202ea6cab0481c6cf138efc5b1594b1c9e8260a509baf21c500af3957",
+        "affectsGlobalScope": true
+      },
       "../types/replicatedstorage.d.ts": {
-        "version": "63e4257a1da6fc9dcfac955a63fbd884e36962dc8d556778af6a59543a6fc772",
+        "version": "6b73e87e908a8e7fbd04c7e20658ea0d9b77a6fd467da5ab87a80db76dd44083",
         "affectsGlobalScope": true
       },
       "../types/screengui.d.ts": {
@@ -356,6 +388,14 @@
         "../node_modules/@rbxts/compiler-types/types/eslintignore.d.ts",
         "../node_modules/@rbxts/types/include/roblox.d.ts"
       ],
+      "../node_modules/@rbxts/roact-rodux/index.d.ts": [
+        "../node_modules/@rbxts/roact-rodux/internal.d.ts",
+        "../node_modules/@rbxts/roact/index.d.ts",
+        "../node_modules/@rbxts/rodux/index.d.ts"
+      ],
+      "../node_modules/@rbxts/roact-rodux/internal.d.ts": [
+        "../node_modules/@rbxts/rodux/index.d.ts"
+      ],
       "../node_modules/@rbxts/roact/index.d.ts": [
         "../node_modules/@rbxts/roact/internal.d.ts"
       ],
@@ -381,6 +421,7 @@
         "../node_modules/@rbxts/types/include/macro_math.d.ts"
       ],
       "../src/client/hello_world.client.tsx": [
+        "../node_modules/@rbxts/roact/index.d.ts",
         "../node_modules/@rbxts/services/index.d.ts"
       ],
       "../src/client/inventory.tsx": [
@@ -389,9 +430,12 @@
         "../src/shared/clientslotdata.ts"
       ],
       "../src/client/inventory_docker.client.tsx": [
+        "../node_modules/@rbxts/roact-rodux/index.d.ts",
         "../node_modules/@rbxts/roact/index.d.ts",
+        "../node_modules/@rbxts/rodux/index.d.ts",
         "../node_modules/@rbxts/services/index.d.ts",
-        "../src/client/inventory.tsx"
+        "../src/client/inventory.tsx",
+        "../src/shared/clientslotdata.ts"
       ],
       "../src/client/main.client.ts": [
         "../src/shared/module.ts"
@@ -414,13 +458,17 @@
       ],
       "../src/server/characterclasses/gamecharacter.ts": [
         "../src/server/inventoryclasses/inventory.ts",
+        "../src/server/itemclasses/item.ts",
         "../src/server/itemspecclasses/itemspec.ts",
         "../src/server/itemspecoracle.ts"
       ],
       "../src/server/docker.server.ts": [
+        "../node_modules/@rbxts/roact-rodux/index.d.ts",
         "../node_modules/@rbxts/t/lib/t.d.ts",
         "../src/server/characterclasses/gamecharacter.ts",
-        "../src/server/inventoryclasses/clientslotinfoextractor.ts",
+        "../src/server/inventoryclasses/clientinventoryinfo.ts",
+        "../src/server/itemclasses/item.ts",
+        "../src/server/itemspecoracle.ts",
         "../src/shared/clientslotdata.ts"
       ],
       "../src/server/effects/damageeffect.ts": [
@@ -433,26 +481,34 @@
         "../src/server/attributeclasses/rawbonus.ts",
         "../src/server/effects/ieffect.ts"
       ],
-      "../src/server/inventoryclasses/clientslotinfoextractor.ts": [
+      "../src/server/inventoryclasses/clientinventoryinfo.ts": [
+        "../node_modules/@rbxts/signal/index.d.ts",
+        "../src/server/inventoryclasses/clientslotinfo.ts",
         "../src/server/inventoryclasses/inventory.ts",
+        "../src/shared/clientslotdata.ts",
+        "../src/shared/slotchangetype.ts"
+      ],
+      "../src/server/inventoryclasses/clientslotinfo.ts": [
+        "../node_modules/@rbxts/signal/index.d.ts",
         "../src/server/inventoryclasses/itemslot.ts",
         "../src/server/itemclasses/equippable.ts",
-        "../src/server/itemclasses/hasdamageeffect.ts",
-        "../src/server/itemclasses/hashealeffect.ts",
         "../src/server/itemclasses/ihaseffect.ts",
         "../src/server/itemclasses/item.ts",
         "../src/server/itemclasses/modelvisualizable.ts",
-        "../src/shared/clientslotdata.ts"
+        "../src/shared/clientslotdata.ts",
+        "../src/shared/slotchangetype.ts"
       ],
       "../src/server/inventoryclasses/inventory.ts": [
         "../src/server/inventoryclasses/itemslot.ts",
         "../src/server/itemclasses/item.ts"
       ],
       "../src/server/inventoryclasses/itemslot.ts": [
-        "../src/server/itemclasses/item.ts"
+        "../node_modules/@rbxts/signal/index.d.ts",
+        "../src/server/itemclasses/item.ts",
+        "../src/shared/slotchangetype.ts"
       ],
       "../src/server/itemclasses/equippable.ts": [
-        "../src/server/inventoryclasses/clientslotinfoextractor.ts",
+        "../src/server/inventoryclasses/clientslotinfo.ts",
         "../src/server/itemclasses/item.ts",
         "../src/server/itemclasses/modelvisualizable.ts",
         "../src/server/itemspecclasses/equippablespec.ts",
@@ -461,14 +517,14 @@
       ],
       "../src/server/itemclasses/hasdamageeffect.ts": [
         "../src/server/effects/damageeffect.ts",
-        "../src/server/inventoryclasses/clientslotinfoextractor.ts",
+        "../src/server/inventoryclasses/clientslotinfo.ts",
         "../src/server/itemclasses/equippable.ts",
         "../src/server/itemclasses/ihaseffect.ts",
         "../src/server/itemspecclasses/damagespecdecorator.ts"
       ],
       "../src/server/itemclasses/hashealeffect.ts": [
         "../src/server/effects/healeffect.ts",
-        "../src/server/inventoryclasses/clientslotinfoextractor.ts",
+        "../src/server/inventoryclasses/clientslotinfo.ts",
         "../src/server/itemclasses/equippable.ts",
         "../src/server/itemclasses/ihaseffect.ts",
         "../src/server/itemspecclasses/equippablespec.ts",
@@ -478,12 +534,12 @@
         "../src/server/itemclasses/equippable.ts"
       ],
       "../src/server/itemclasses/item.ts": [
-        "../src/server/inventoryclasses/clientslotinfoextractor.ts",
+        "../src/server/inventoryclasses/clientslotinfo.ts",
         "../src/server/itemclasses/modelvisualizable.ts",
         "../src/server/itemspecclasses/itemspec.ts"
       ],
       "../src/server/itemclasses/modelvisualizable.ts": [
-        "../src/server/inventoryclasses/clientslotinfoextractor.ts",
+        "../src/server/inventoryclasses/clientslotinfo.ts",
         "../src/server/itemclasses/item.ts",
         "../src/server/itemspecclasses/modelvisualizablespecdecorator.ts"
       ],
@@ -538,6 +594,7 @@
       ],
       "../src/server/itemspecoracle.ts": [
         "../src/server/effects/damageeffect.ts",
+        "../src/server/itemspecclasses/consumablespec.ts",
         "../src/server/itemspecclasses/damagespecdecorator.ts",
         "../src/server/itemspecclasses/equippablespec.ts",
         "../src/server/itemspecclasses/itemspec.ts"

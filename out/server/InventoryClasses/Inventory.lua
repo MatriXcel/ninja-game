@@ -15,7 +15,7 @@ do
 		return self
 	end
 	function Inventory:constructor(startingItems)
-		self.maxSlots = 6
+		self.maxSlots = 9
 		self.slots = {}
 		do
 			local _0 = 0
@@ -26,7 +26,11 @@ do
 				_0 += 1
 			end
 		end
+		self.OnSlotChanged = Instance.new("BindableEvent")
 		self:SetStartingItems(startingItems)
+	end
+	function Inventory:GetSlots()
+		return self.slots
 	end
 	function Inventory:SetStartingItems(startingItems)
 		do
@@ -40,6 +44,9 @@ do
 				_0 += 1
 			end
 		end
+	end
+	function Inventory:GetSlotAtIndex(index)
+		return self.slots[index + 1]
 	end
 	function Inventory:AddItem(item)
 		print(item:GetItemName())

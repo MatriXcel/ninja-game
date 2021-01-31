@@ -21,7 +21,7 @@ export class HealSpecDecorator implements IHealSpecDecorator {
         this.healEffect = healEffect;
     }
 
-    GetIconID(): string | undefined {
+    GetIconID(): string {
         return this.equippableSpecDecorator.GetIconID();
     }
 

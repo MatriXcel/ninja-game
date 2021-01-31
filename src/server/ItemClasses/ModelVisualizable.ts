@@ -1,5 +1,5 @@
 import { IModelVisualizableSpec, ModelVisualizableSpecDecorator } from "server/ItemSpecClasses/ModelVisualizableSpecDecorator";
-import { IItemVisitor } from "server/InventoryClasses/ClientSlotInfoExtractor";
+import { IItemVisitor } from "server/InventoryClasses/ClientSlotInfo";
 import { IItem, Item } from "./Item";
 
 export interface IModelVisualizable extends IItem {
@@ -16,7 +16,7 @@ export class ModelVisualizable implements IModelVisualizable {
         this.modelVisualizableSpecDecorator = modelVisualizableSpecDecorator;
     }
 
-    GetIconID(): string | undefined {
+    GetIconID(): string {
         return this.modelVisualizableSpecDecorator.GetIconID();
     }
 

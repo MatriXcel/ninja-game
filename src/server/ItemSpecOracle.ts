@@ -1,7 +1,8 @@
 import { DamageEffect } from "./Effects/DamageEffect";
+import { ConsumableSpec } from "./ItemSpecClasses/ConsumableSpec";
 import { DamageSpecDecorator } from "./ItemSpecClasses/DamageSpecDecorator";
 import { EquippableSpec } from "./ItemSpecClasses/EquippableSpec";
-import { IItemSpec } from "./ItemSpecClasses/ItemSpec";
+import { IItemSpec, ItemSpec } from "./ItemSpecClasses/ItemSpec";
 
 export class ItemSpecOracle {
     private itemSpecDatabase: IItemSpec[];
@@ -15,10 +16,18 @@ export class ItemSpecOracle {
                     new Instance("Model"),
                     "Warrior Sword",
                     "a holy sword of the paladins",
-                    20
+                    20,
+                    "SwordIcon"
                 ),
                 new DamageEffect(10)
             ),
+
+            new ItemSpec(
+                "Greater Healing Potion",
+                "Heals the user",
+                4,
+                "PotionIcon"
+            )
         ];
     }
 

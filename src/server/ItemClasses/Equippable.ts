@@ -1,7 +1,7 @@
 import { EquippableSpec, IEquippableSpec } from "server/ItemSpecClasses/EquippableSpec";
 import { EquippableSpecDecorator, IEquippableSpecDecorator } from "server/ItemSpecClasses/EquippableSpecDecorator";
 import { ModelVisualizableSpecDecorator } from "server/ItemSpecClasses/ModelVisualizableSpecDecorator";
-import { IItemVisitor } from "server/InventoryClasses/ClientSlotInfoExtractor";
+import { IItemVisitor } from "server/InventoryClasses/ClientSlotInfo";
 import { IItem, Item } from "./Item";
 import { IModelVisualizable, ModelVisualizable } from "./ModelVisualizable";
 
@@ -18,7 +18,7 @@ export class Equippable implements IModelVisualizable {
         this.equippableSpecDecorator = equippableSpecDecorator;
         this.modelVisualizable = modelVisualizable;
     }
-    GetIconID(): string | undefined {
+    GetIconID(): string {
         return this.modelVisualizable.GetIconID();
     }
 
