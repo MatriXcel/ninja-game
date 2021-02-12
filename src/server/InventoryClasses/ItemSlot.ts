@@ -1,17 +1,18 @@
 import Signal from "@rbxts/signal";
-import { IItem } from "server/ItemClasses/Item";
+import { IItem } from "shared/ItemClasses/Item";
+import { ItemFactory } from "shared/ItemFactory";
 import { SlotChangeType } from "shared/SlotChangeType";
 
 
 export class ItemSlot {
 
-    private item?: IItem;
+    private instanceID?: number;
     private numStacks: number;
 
     OnSlotChanged: Signal<{ (changeType: SlotChangeType): void }>;
 
-    constructor(item?: IItem, numStacks: number = 0) {
-        this.item = item;
+    constructor(instanceID?: number, numStacks: number = 0) {
+        this.instanceID = instanceID;
         this.numStacks = numStacks;
 
         this.OnSlotChanged = new Signal();
@@ -21,8 +22,15 @@ export class ItemSlot {
         return this.numStacks;
     }
 
-    CanAddStack(item: IItem, amount: number = 1): boolean {
-        return this.item !== undefined && this.item.GetItemID() === item.GetItemID() && this.numStacks + amount <= this.item.GetMaximumStacks();
+    private GetInstanceByID(): IItem {
+        return ItemFactory.GetInstance().GetInstanceByID(this.instanceID as number);
+    }
+
+    CanAddStack(targetInstanceID: number, amount: number = 1): boolean {
+        let targetItemID = ItemFactory.GetInstance().GetInstanceByID(targetInstanceID).GetItemID();
+        let instanceItemID = (this.instanceID !== undefined) ? this.GetInstanceByID().GetItemID() : undefined;
+
+        return instanceItemID === undefined || (targetItemID === instanceItemID && this.numStacks + amount <= this.GetInstanceByID().GetMaximumStacks());
     }
 
     AddStack(numStacks: number = 1) {
@@ -37,10 +45,10 @@ export class ItemSlot {
     }
 
     GetItem(): IItem | undefined {
-        return this.item;
+        return (this.instanceID === undefined) ? undefined : this.GetInstanceByID();
     }
 
-    SetItem(item: IItem) {
-        this.item = item;
+    SetItem(instanceID: number) {
+        this.instanceID = instanceID;;
     }
 }

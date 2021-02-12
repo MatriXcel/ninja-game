@@ -1,7 +1,6 @@
 import { Inventory } from "server/InventoryClasses/Inventory";
-import { IItem } from "server/ItemClasses/Item";
-import { IItemSpec } from "server/ItemSpecClasses/ItemSpec";
-import { ItemSpecOracle } from "server/ItemSpecOracle";
+import { IItemSpec } from "shared/ItemSpecClasses/ItemSpec";
+import { ItemSpecOracle } from "shared/ItemSpecOracle";
 
 export class GameCharacter {
 
@@ -12,14 +11,10 @@ export class GameCharacter {
         this.model = model;
         let itemSpecOracle = ItemSpecOracle.GetInstance();
 
-        print(itemSpecOracle.GetSpecByName("Warrior Sword"));
-
         this.inventory = new Inventory([
-            itemSpecOracle.GetSpecByName("Warrior Sword")?.CreateItemFromSpec(),
-            itemSpecOracle.GetSpecByName("Warrior Sword")?.CreateItemFromSpec(),
+            (itemSpecOracle.GetSpecByName("Warrior Sword") as IItemSpec).CreateItemFromSpec().GetInstanceID(),
+            (itemSpecOracle.GetSpecByName("Warrior Sword") as IItemSpec).CreateItemFromSpec().GetInstanceID(),
         ]);
-
-        // this.inventory.AddItem(itemSpecOracle.GetSpecByName("Warrior Sword")?.CreateItemFromSpec() as IItem);
     }
 
     GetInventory(): Inventory {

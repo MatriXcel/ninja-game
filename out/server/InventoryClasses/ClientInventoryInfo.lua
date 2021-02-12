@@ -24,14 +24,14 @@ do
 				local i = _0
 				self.clientSlotInfos[i + 1] = ClientSlotInfo.new(inventory:GetSlotAtIndex(i))
 				self.clientSlotInfos[i + 1].OnSlotInfoChanged:Connect(function()
-					self.OnInventorySlotInfoChanged:Fire(i, self.clientSlotInfos[i + 1])
+					self.OnInventorySlotInfoChanged:Fire(i, self.clientSlotInfos[i + 1]:GetSlotClientData())
 				end)
 				_0 = i
 				_0 += 1
 			end
 		end
 	end
-	function ClientInventoryInfo:GetSlotDatas()
+	function ClientInventoryInfo:GetSlotClientDatas()
 		local _0 = self.clientSlotInfos
 		local _1 = function(info)
 			return info:GetSlotClientData()

@@ -1,4 +1,5 @@
 import Signal from "@rbxts/signal";
+import { IItem } from "shared/ItemClasses/Item";
 import { ClientSlotData } from "shared/ClientSlotData";
 import { SlotChangeType } from "shared/SlotChangeType";
 import { ClientSlotInfo } from "./ClientSlotInfo";
@@ -6,7 +7,7 @@ import { Inventory } from "./Inventory";
 
 export class ClientInventoryInfo {
     private clientSlotInfos: ClientSlotInfo[];
-    OnInventorySlotInfoChanged: Signal<{ (slotNum: number, slotInfo: ClientSlotInfo): void }>;
+    OnInventorySlotInfoChanged: Signal<{ (slotNum: number, slotData: ClientSlotData): void }>;
 
     constructor(inventory: Inventory) {
         this.clientSlotInfos = [];
@@ -16,12 +17,12 @@ export class ClientInventoryInfo {
             this.clientSlotInfos[i] = new ClientSlotInfo(inventory.GetSlotAtIndex(i));
 
             this.clientSlotInfos[i].OnSlotInfoChanged.Connect(() => {
-                this.OnInventorySlotInfoChanged.Fire(i, this.clientSlotInfos[i]);
+                this.OnInventorySlotInfoChanged.Fire(i, this.clientSlotInfos[i].GetSlotClientData());
             });
         }
     }
 
-    GetSlotDatas(): ClientSlotData[] {
+    GetSlotClientDatas(): ClientSlotData[] {
         return this.clientSlotInfos.map((info) => info.GetSlotClientData());
     }
 }

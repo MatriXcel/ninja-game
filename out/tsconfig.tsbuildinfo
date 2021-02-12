@@ -1,18 +1,6 @@
 {
   "program": {
     "fileInfos": {
-      "../src/client/inventoryui.ts": {
-        "version": "5dee0e0cd386c4e9f8a594eee54dd6c5e7a238ef0d32392e3cbd74005866b464",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@rbxts/services/index.d.ts": {
-        "version": "ab057697986178633641a90bb301fc06f59ab6e3276256237fbf8205bd852bb9",
-        "affectsGlobalScope": false
-      },
-      "../src/client/tooltipui.ts": {
-        "version": "e493ccf67db15cce84321be9a519a43245444a77545e631dee11391ef129fcf9",
-        "affectsGlobalScope": false
-      },
       "../node_modules/@rbxts/roact/internal.d.ts": {
         "version": "be669d9ff1319d4837e7d4e17bfe6e619bb3e67105d26a38cbd0535ad7f6c0ac",
         "affectsGlobalScope": true
@@ -21,16 +9,112 @@
         "version": "990133e46881ab4501759593932fb9875d2c02605018f4640f27c3c5122c286b",
         "affectsGlobalScope": true
       },
-      "../src/client/hello_world.client.tsx": {
-        "version": "abe911cbf475ba77a7dd481254dba28993b3b21259f9c8a2dc029ac29f5f7101",
+      "../node_modules/@rbxts/services/index.d.ts": {
+        "version": "ab057697986178633641a90bb301fc06f59ab6e3276256237fbf8205bd852bb9",
         "affectsGlobalScope": false
       },
       "../src/shared/clientslotdata.ts": {
-        "version": "a1382a3f5a25f723fb74e4e646ce5bd4f2382bd856d2e5e1240738ffff7edcbf",
+        "version": "7c1510ba1bb883ef8823cd2b4eee88265ddd301ff3a178941f7e821e92eef665",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/attributeclasses/baseattribute.ts": {
+        "version": "65ba7c81a4fc78d407e698780e6b0faf87bf42849f966e07399e970e4db19778",
+        "affectsGlobalScope": false
+      },
+      "../src/server/utility/timer.ts": {
+        "version": "35bc7366243ef96ee84f78b999db02f3db127ff079d2375f2a1f4079f446e402",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/attributeclasses/finalbonus.ts": {
+        "version": "532819f848079fc8c91c567f0c50b0d027f4f0d00b2174946d4d70dc3c913f20",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/attributeclasses/rawbonus.ts": {
+        "version": "8ba7f3c7ddb50760c987f643b0c7a90b26b8a8b2fff64799f38a5387b04dbe7d",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/attributeclasses/attribute.ts": {
+        "version": "a31932c8cc89afe635d5ee0d6399615e2b45b0d363956984fd015a370b86ea78",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/effects/ieffect.ts": {
+        "version": "b0326eb020adcc25f8e40c53cb94a0a8ae5e5e53416b23896765dd5cb3e81bba",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/effects/damageeffect.ts": {
+        "version": "4257a3bce35bf14ff2fed26c2ce69ad5b93ea0d4d94c4195a8be5b067b64e026",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/itemspecclasses/equippablespecdecorator.ts": {
+        "version": "3971d2cb0c8c80252963f1ce924569148ad3448585d6697b740ed535cc23aa6c",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/itemspecclasses/ieffectspecdecorator.ts": {
+        "version": "5cca07d7064b1b8e0e1b6238fe4b37bb3504d95c7e332a266a94c3df6ec17de2",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/itemspecclasses/damagespecdecorator.ts": {
+        "version": "b871e838237fa16bead7754fdbcae3a3dc0876cc79848805ba1296e47d7c7f23",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/itemclasses/ihaseffect.ts": {
+        "version": "07f6ef8c1cecdb5bc2194bdc80b7e1404eb60f11836f7fd5cf35227c5e8c6696",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/itemclasses/hasdamageeffect.ts": {
+        "version": "5067d16d1c7463e9e6e3728599e34ecbf4953901646261c31a551a5a1892cf1a",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/effects/healeffect.ts": {
+        "version": "4daf5f7dda125c6d1f8420edec5483e0731da7dbf8fed9a68d3c8e9c255fdc98",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/itemspecclasses/healspecdecorator.ts": {
+        "version": "9e658b32f6461584ac8ff41e0518fd3d4854acb3ba150377d13b34be67286190",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/itemclasses/hashealeffect.ts": {
+        "version": "e1a695e80406cfbe97116bda5ce418111ea53d4b7accfad5e55b88de81cf52aa",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/itemfactory.ts": {
+        "version": "01a7ce43ebb37bfc640db30ffc787eea294ba8e4facaf75ca7f71d2806e8498a",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/itemspecclasses/modelvisualizablespecdecorator.ts": {
+        "version": "dc3a5b3c3e21df0f040fb45ae5a85288c7a598d5a5545fdd4b6ad4744470ffdd",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/itemclasses/modelvisualizable.ts": {
+        "version": "271efdfb56076fb1f87e6aad4bdfd2cd5f7bb15f74336ea76441fe5f508a6e1c",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/itemspecclasses/equippablespec.ts": {
+        "version": "f53bbeef4a643bd52e9229dcd206a99482c1eea1869e787a42c96a0e53b0f6c7",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/itemclasses/equippable.ts": {
+        "version": "010c3873d53aa5515550525ea4b1303ab45d04ea5b67f66a4ac91778030da116",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/iitemvisitor.ts": {
+        "version": "f406170902271a7186f0f3334d69161412b87623a5e4c9a685aea5f3ddeff2a0",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/itemclasses/item.ts": {
+        "version": "f44fcb236ee5500c5da2fbb3190472fcb91139e48aed2cef4bdd694f719b7938",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/itemspecclasses/itemspec.ts": {
+        "version": "bb08eee978eae93a2f61170422d2f3771104b05491cb07d7b1d5d593ddc9e388",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/itemspecoracle.ts": {
+        "version": "676662a30114f7469db701b61356c0b2d99f75a6b8b0a3838fb464de4b42c9d2",
         "affectsGlobalScope": false
       },
       "../src/client/inventory.tsx": {
-        "version": "cdbde27e5c916c6d0b7d1af2adfc975a196c484d9d552f2d8e4042dbcb7d7668",
+        "version": "ef9573a4ee0e24f800d14eb37fcff5fff56839117be8ff25b71a2965c65f52aa",
         "affectsGlobalScope": false
       },
       "../node_modules/@rbxts/rodux/index.d.ts": {
@@ -46,7 +130,7 @@
         "affectsGlobalScope": false
       },
       "../src/client/inventory_docker.client.tsx": {
-        "version": "5415082410089dd90faf3f1f6de052cf12b0bc23348a14138f003ec6aabe07a2",
+        "version": "eed67ef8148cb069af213e3cffce340f4239efc9beeb647083c721a7c68ab6da",
         "affectsGlobalScope": false
       },
       "../src/shared/module.ts": {
@@ -57,32 +141,8 @@
         "version": "8c875200e240dad46ccf5f7ac9d923d39c0919cc66f2cf920e4c13cdc3e88a87",
         "affectsGlobalScope": false
       },
-      "../src/server/attributeclasses/baseattribute.ts": {
-        "version": "65ba7c81a4fc78d407e698780e6b0faf87bf42849f966e07399e970e4db19778",
-        "affectsGlobalScope": false
-      },
-      "../src/server/utility/timer.ts": {
-        "version": "35bc7366243ef96ee84f78b999db02f3db127ff079d2375f2a1f4079f446e402",
-        "affectsGlobalScope": false
-      },
-      "../src/server/attributeclasses/finalbonus.ts": {
-        "version": "532819f848079fc8c91c567f0c50b0d027f4f0d00b2174946d4d70dc3c913f20",
-        "affectsGlobalScope": false
-      },
-      "../src/server/attributeclasses/rawbonus.ts": {
-        "version": "8ba7f3c7ddb50760c987f643b0c7a90b26b8a8b2fff64799f38a5387b04dbe7d",
-        "affectsGlobalScope": false
-      },
-      "../src/server/attributeclasses/attribute.ts": {
-        "version": "a31932c8cc89afe635d5ee0d6399615e2b45b0d363956984fd015a370b86ea78",
-        "affectsGlobalScope": false
-      },
-      "../src/server/effects/ieffect.ts": {
-        "version": "b0326eb020adcc25f8e40c53cb94a0a8ae5e5e53416b23896765dd5cb3e81bba",
-        "affectsGlobalScope": false
-      },
-      "../src/server/effects/damageeffect.ts": {
-        "version": "0ece1c63ad3909eb50f203a7103ce6ff82f8dea79d405976d29f3fad50df26f1",
+      "../node_modules/@rbxts/t/lib/t.d.ts": {
+        "version": "b394e2aabde1e211d8def4d6cd31598b2385160bd16ab5c10f81eec19c94aba2",
         "affectsGlobalScope": false
       },
       "../node_modules/@rbxts/signal/index.d.ts": {
@@ -94,95 +154,27 @@
         "affectsGlobalScope": false
       },
       "../src/server/inventoryclasses/itemslot.ts": {
-        "version": "080497c0955b4ff7644f2f48910d5c3ee0284fdc09624dc35e0a421bbef1726d",
-        "affectsGlobalScope": false
-      },
-      "../src/server/effects/healeffect.ts": {
-        "version": "c69e7ac4012bb187b4eae1645609a7f118e95755f58050ed536bf50e02f30697",
-        "affectsGlobalScope": false
-      },
-      "../src/server/itemclasses/ihaseffect.ts": {
-        "version": "07f6ef8c1cecdb5bc2194bdc80b7e1404eb60f11836f7fd5cf35227c5e8c6696",
-        "affectsGlobalScope": false
-      },
-      "../src/server/itemclasses/hashealeffect.ts": {
-        "version": "9e4d3decaea345daf2c6c41e9653caeec9e64461f7c8855998a760a8832333e6",
-        "affectsGlobalScope": false
-      },
-      "../src/server/itemspecclasses/equippablespecdecorator.ts": {
-        "version": "77e75533b6927b14032db6d46ab17200be134b72d96c1e6c5e4cd6b7ea9ea530",
-        "affectsGlobalScope": false
-      },
-      "../src/server/itemspecclasses/ieffectspecdecorator.ts": {
-        "version": "5cca07d7064b1b8e0e1b6238fe4b37bb3504d95c7e332a266a94c3df6ec17de2",
-        "affectsGlobalScope": false
-      },
-      "../src/server/itemspecclasses/healspecdecorator.ts": {
-        "version": "4b70c81cd12397dbfb00f12a4aa5035c630566b870ca663ca1344fdfe576159f",
-        "affectsGlobalScope": false
-      },
-      "../src/server/itemspecclasses/modelvisualizablespecdecorator.ts": {
-        "version": "665c4605aa5d0fd91c8c4ef76effef6bb4002ad297516cb0b8f17b79f5c4381d",
-        "affectsGlobalScope": false
-      },
-      "../src/server/itemclasses/modelvisualizable.ts": {
-        "version": "e2ed6afdc658a50ee1d85a7e755125ce2d6b693fbb7579ab27614580c9aea2c4",
-        "affectsGlobalScope": false
-      },
-      "../src/server/itemspecclasses/equippablespec.ts": {
-        "version": "fca97c9363fde4396201c0eddc7c0094723e307b7897c67f7db5ed7b49d61b01",
-        "affectsGlobalScope": false
-      },
-      "../src/server/itemclasses/equippable.ts": {
-        "version": "e116421ad46668e978358747c4f2e0d796ac1c040c367fe91964e876ccd4ba51",
-        "affectsGlobalScope": false
-      },
-      "../src/server/inventoryclasses/clientslotinfo.ts": {
-        "version": "cc43e71467afee369d9721464f3ecdbbe84fc2eff8613b83558dc0843596651b",
-        "affectsGlobalScope": false
-      },
-      "../src/server/itemclasses/item.ts": {
-        "version": "c884618851d22caf9811b71e8d3983b304e263cde1ad66e875e4fa0c11802989",
-        "affectsGlobalScope": false
-      },
-      "../src/server/itemspecclasses/itemspec.ts": {
-        "version": "6337ca2c6fd8c05d3e22b024c2c56ad32b0b89e79d0ad164e90c699938b3a327",
-        "affectsGlobalScope": false
-      },
-      "../src/server/itemspecclasses/consumablespec.ts": {
-        "version": "be323ec88cd75ae95bd8ff19f30c691ba824bd9364472004f527ff75b9e047c4",
-        "affectsGlobalScope": false
-      },
-      "../src/server/itemclasses/hasdamageeffect.ts": {
-        "version": "6c090d402e37082e679a2a17c4cabc8cb0a98d31bc5243b61360b0e8eaaaf4de",
-        "affectsGlobalScope": false
-      },
-      "../src/server/itemspecclasses/damagespecdecorator.ts": {
-        "version": "cbbb1811ebaa67ca022b499312d0c6a148e45f043157abb6deeb2acae011ecaf",
-        "affectsGlobalScope": false
-      },
-      "../src/server/itemspecoracle.ts": {
-        "version": "32b8b7b0d46b655221af34b1a01ededd426a2fdc7806728c2d9bddf644f10926",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@rbxts/t/lib/t.d.ts": {
-        "version": "b394e2aabde1e211d8def4d6cd31598b2385160bd16ab5c10f81eec19c94aba2",
+        "version": "5c77509512ad17e5f0fbd4526bca22aff038f8859a24542c5056f55f1577d3f7",
         "affectsGlobalScope": false
       },
       "../src/server/inventoryclasses/inventory.ts": {
-        "version": "1d65d4649fd51852c557ecb1165942e11c518b36f4afe10bfdee0c33b3e36cee",
+        "version": "be0c4de2be1b86ca9c20579da4a3e91a0eab5115bc1471f4ed25bc31e5438dd3",
         "affectsGlobalScope": false
       },
       "../src/server/characterclasses/gamecharacter.ts": {
-        "version": "5f4b7d309c926404393a5bc18601f82d68585a711a9d103d509094e45fe2731c",
+        "version": "9a65c3b0e493220933339d191e8a4fb0414526cf2d9b44382552f45f7e1cf169",
+        "affectsGlobalScope": false
+      },
+      "../src/server/inventoryclasses/clientslotinfo.ts": {
+        "version": "5e10f4c5131a37752784832ba4e5ff552dfd8330648820f109e267651c33a0c8",
         "affectsGlobalScope": false
       },
       "../src/server/inventoryclasses/clientinventoryinfo.ts": {
-        "version": "9c03dfdc0ab781b542fe356d0dfdfb50ed30b9a9fbc9ed616509743529b31c8e",
+        "version": "49e1d100abbcbcf50cd17e6e4e4acb81fa2798144b86901ca67fa29d401b945d",
         "affectsGlobalScope": false
       },
       "../src/server/docker.server.ts": {
-        "version": "b14cd422b9ebd998d620ee52c3c5a5e5df905a9ff09d90833055e00120bfee44",
+        "version": "77be8f092ed5a68147b950466b509f9cdc1b5b9444f68d3800e8aa156ceaa6fb",
         "affectsGlobalScope": false
       },
       "../src/server/main.server.ts": {
@@ -190,7 +182,11 @@
         "affectsGlobalScope": false
       },
       "../src/server/test.server.ts": {
-        "version": "a1b80aef71c03b0413bb1e587364da9c2fabdb58240b0f0027fbbe98dffabaa1",
+        "version": "e5bd38ca9b1906603e671302af295f84662f9d57df29e14e6b906cd28f083a0b",
+        "affectsGlobalScope": false
+      },
+      "../src/shared/itemspecclasses/consumablespec.ts": {
+        "version": "d07048b145e641d71c123d569d87978183e1d1a4cb2ffd7f483ee729e200c494",
         "affectsGlobalScope": false
       },
       "../types/effectframe.d.ts": {
@@ -420,14 +416,12 @@
         "../node_modules/@rbxts/types/include/lua.d.ts",
         "../node_modules/@rbxts/types/include/macro_math.d.ts"
       ],
-      "../src/client/hello_world.client.tsx": [
-        "../node_modules/@rbxts/roact/index.d.ts",
-        "../node_modules/@rbxts/services/index.d.ts"
-      ],
       "../src/client/inventory.tsx": [
         "../node_modules/@rbxts/roact/index.d.ts",
         "../node_modules/@rbxts/services/index.d.ts",
-        "../src/shared/clientslotdata.ts"
+        "../src/shared/clientslotdata.ts",
+        "../src/shared/itemspecclasses/itemspec.ts",
+        "../src/shared/itemspecoracle.ts"
       ],
       "../src/client/inventory_docker.client.tsx": [
         "../node_modules/@rbxts/roact-rodux/index.d.ts",
@@ -440,180 +434,204 @@
       "../src/client/main.client.ts": [
         "../src/shared/module.ts"
       ],
-      "../src/client/tooltipui.ts": [
-        "../node_modules/@rbxts/services/index.d.ts"
-      ],
-      "../src/server/attributeclasses/attribute.ts": [
-        "../src/server/attributeclasses/baseattribute.ts",
-        "../src/server/attributeclasses/finalbonus.ts",
-        "../src/server/attributeclasses/rawbonus.ts"
-      ],
-      "../src/server/attributeclasses/finalbonus.ts": [
-        "../src/server/attributeclasses/attribute.ts",
-        "../src/server/attributeclasses/baseattribute.ts",
-        "../src/server/utility/timer.ts"
-      ],
-      "../src/server/attributeclasses/rawbonus.ts": [
-        "../src/server/attributeclasses/baseattribute.ts"
-      ],
       "../src/server/characterclasses/gamecharacter.ts": [
         "../src/server/inventoryclasses/inventory.ts",
-        "../src/server/itemclasses/item.ts",
-        "../src/server/itemspecclasses/itemspec.ts",
-        "../src/server/itemspecoracle.ts"
+        "../src/shared/itemspecclasses/itemspec.ts",
+        "../src/shared/itemspecoracle.ts"
       ],
       "../src/server/docker.server.ts": [
-        "../node_modules/@rbxts/roact-rodux/index.d.ts",
         "../node_modules/@rbxts/t/lib/t.d.ts",
         "../src/server/characterclasses/gamecharacter.ts",
         "../src/server/inventoryclasses/clientinventoryinfo.ts",
-        "../src/server/itemclasses/item.ts",
-        "../src/server/itemspecoracle.ts",
-        "../src/shared/clientslotdata.ts"
-      ],
-      "../src/server/effects/damageeffect.ts": [
-        "../src/server/attributeclasses/attribute.ts",
-        "../src/server/attributeclasses/rawbonus.ts",
-        "../src/server/effects/ieffect.ts"
-      ],
-      "../src/server/effects/healeffect.ts": [
-        "../src/server/attributeclasses/attribute.ts",
-        "../src/server/attributeclasses/rawbonus.ts",
-        "../src/server/effects/ieffect.ts"
+        "../src/shared/itemclasses/item.ts",
+        "../src/shared/itemspecclasses/itemspec.ts",
+        "../src/shared/itemspecoracle.ts"
       ],
       "../src/server/inventoryclasses/clientinventoryinfo.ts": [
         "../node_modules/@rbxts/signal/index.d.ts",
         "../src/server/inventoryclasses/clientslotinfo.ts",
         "../src/server/inventoryclasses/inventory.ts",
         "../src/shared/clientslotdata.ts",
+        "../src/shared/itemclasses/item.ts",
         "../src/shared/slotchangetype.ts"
       ],
       "../src/server/inventoryclasses/clientslotinfo.ts": [
         "../node_modules/@rbxts/signal/index.d.ts",
         "../src/server/inventoryclasses/itemslot.ts",
-        "../src/server/itemclasses/equippable.ts",
-        "../src/server/itemclasses/ihaseffect.ts",
-        "../src/server/itemclasses/item.ts",
-        "../src/server/itemclasses/modelvisualizable.ts",
         "../src/shared/clientslotdata.ts",
+        "../src/shared/iitemvisitor.ts",
+        "../src/shared/itemclasses/equippable.ts",
+        "../src/shared/itemclasses/ihaseffect.ts",
+        "../src/shared/itemclasses/item.ts",
+        "../src/shared/itemclasses/modelvisualizable.ts",
         "../src/shared/slotchangetype.ts"
       ],
       "../src/server/inventoryclasses/inventory.ts": [
         "../src/server/inventoryclasses/itemslot.ts",
-        "../src/server/itemclasses/item.ts"
+        "../src/shared/itemclasses/item.ts",
+        "../src/shared/itemfactory.ts"
       ],
       "../src/server/inventoryclasses/itemslot.ts": [
         "../node_modules/@rbxts/signal/index.d.ts",
-        "../src/server/itemclasses/item.ts",
+        "../src/shared/itemclasses/item.ts",
+        "../src/shared/itemfactory.ts",
         "../src/shared/slotchangetype.ts"
-      ],
-      "../src/server/itemclasses/equippable.ts": [
-        "../src/server/inventoryclasses/clientslotinfo.ts",
-        "../src/server/itemclasses/item.ts",
-        "../src/server/itemclasses/modelvisualizable.ts",
-        "../src/server/itemspecclasses/equippablespec.ts",
-        "../src/server/itemspecclasses/equippablespecdecorator.ts",
-        "../src/server/itemspecclasses/modelvisualizablespecdecorator.ts"
-      ],
-      "../src/server/itemclasses/hasdamageeffect.ts": [
-        "../src/server/effects/damageeffect.ts",
-        "../src/server/inventoryclasses/clientslotinfo.ts",
-        "../src/server/itemclasses/equippable.ts",
-        "../src/server/itemclasses/ihaseffect.ts",
-        "../src/server/itemspecclasses/damagespecdecorator.ts"
-      ],
-      "../src/server/itemclasses/hashealeffect.ts": [
-        "../src/server/effects/healeffect.ts",
-        "../src/server/inventoryclasses/clientslotinfo.ts",
-        "../src/server/itemclasses/equippable.ts",
-        "../src/server/itemclasses/ihaseffect.ts",
-        "../src/server/itemspecclasses/equippablespec.ts",
-        "../src/server/itemspecclasses/healspecdecorator.ts"
-      ],
-      "../src/server/itemclasses/ihaseffect.ts": [
-        "../src/server/itemclasses/equippable.ts"
-      ],
-      "../src/server/itemclasses/item.ts": [
-        "../src/server/inventoryclasses/clientslotinfo.ts",
-        "../src/server/itemclasses/modelvisualizable.ts",
-        "../src/server/itemspecclasses/itemspec.ts"
-      ],
-      "../src/server/itemclasses/modelvisualizable.ts": [
-        "../src/server/inventoryclasses/clientslotinfo.ts",
-        "../src/server/itemclasses/item.ts",
-        "../src/server/itemspecclasses/modelvisualizablespecdecorator.ts"
-      ],
-      "../src/server/itemspecclasses/consumablespec.ts": [
-        "../src/server/effects/ieffect.ts",
-        "../src/server/itemspecclasses/itemspec.ts"
-      ],
-      "../src/server/itemspecclasses/damagespecdecorator.ts": [
-        "../src/server/effects/damageeffect.ts",
-        "../src/server/itemclasses/equippable.ts",
-        "../src/server/itemclasses/hasdamageeffect.ts",
-        "../src/server/itemspecclasses/equippablespecdecorator.ts",
-        "../src/server/itemspecclasses/ieffectspecdecorator.ts"
-      ],
-      "../src/server/itemspecclasses/equippablespec.ts": [
-        "../src/server/itemclasses/equippable.ts",
-        "../src/server/itemclasses/item.ts",
-        "../src/server/itemclasses/modelvisualizable.ts",
-        "../src/server/itemspecclasses/equippablespecdecorator.ts",
-        "../src/server/itemspecclasses/itemspec.ts",
-        "../src/server/itemspecclasses/modelvisualizablespecdecorator.ts"
-      ],
-      "../src/server/itemspecclasses/equippablespecdecorator.ts": [
-        "../src/server/itemclasses/equippable.ts",
-        "../src/server/itemclasses/item.ts",
-        "../src/server/itemclasses/modelvisualizable.ts",
-        "../src/server/itemspecclasses/modelvisualizablespecdecorator.ts"
-      ],
-      "../src/server/itemspecclasses/healspecdecorator.ts": [
-        "../src/server/effects/healeffect.ts",
-        "../src/server/itemclasses/equippable.ts",
-        "../src/server/itemclasses/hashealeffect.ts",
-        "../src/server/itemclasses/item.ts",
-        "../src/server/itemclasses/modelvisualizable.ts",
-        "../src/server/itemspecclasses/equippablespec.ts",
-        "../src/server/itemspecclasses/equippablespecdecorator.ts",
-        "../src/server/itemspecclasses/ieffectspecdecorator.ts"
-      ],
-      "../src/server/itemspecclasses/ieffectspecdecorator.ts": [
-        "../src/server/itemspecclasses/equippablespecdecorator.ts"
-      ],
-      "../src/server/itemspecclasses/itemspec.ts": [
-        "../src/server/itemclasses/item.ts"
-      ],
-      "../src/server/itemspecclasses/modelvisualizablespecdecorator.ts": [
-        "../src/server/itemclasses/equippable.ts",
-        "../src/server/itemclasses/item.ts",
-        "../src/server/itemclasses/modelvisualizable.ts",
-        "../src/server/itemspecclasses/equippablespec.ts",
-        "../src/server/itemspecclasses/healspecdecorator.ts",
-        "../src/server/itemspecclasses/itemspec.ts"
-      ],
-      "../src/server/itemspecoracle.ts": [
-        "../src/server/effects/damageeffect.ts",
-        "../src/server/itemspecclasses/consumablespec.ts",
-        "../src/server/itemspecclasses/damagespecdecorator.ts",
-        "../src/server/itemspecclasses/equippablespec.ts",
-        "../src/server/itemspecclasses/itemspec.ts"
       ],
       "../src/server/main.server.ts": [
         "../src/shared/module.ts"
       ],
       "../src/server/test.server.ts": [
-        "../src/server/attributeclasses/rawbonus.ts",
-        "../src/server/effects/damageeffect.ts",
-        "../src/server/effects/healeffect.ts",
-        "../src/server/itemspecclasses/damagespecdecorator.ts",
-        "../src/server/itemspecclasses/equippablespec.ts",
-        "../src/server/itemspecclasses/healspecdecorator.ts",
-        "../src/server/itemspecclasses/itemspec.ts",
-        "../src/server/itemspecclasses/modelvisualizablespecdecorator.ts"
+        "../src/shared/attributeclasses/rawbonus.ts",
+        "../src/shared/effects/damageeffect.ts",
+        "../src/shared/effects/healeffect.ts",
+        "../src/shared/itemspecclasses/damagespecdecorator.ts",
+        "../src/shared/itemspecclasses/equippablespec.ts",
+        "../src/shared/itemspecclasses/healspecdecorator.ts",
+        "../src/shared/itemspecclasses/itemspec.ts",
+        "../src/shared/itemspecclasses/modelvisualizablespecdecorator.ts"
       ],
       "../src/server/utility/timer.ts": [
         "../node_modules/@rbxts/services/index.d.ts"
+      ],
+      "../src/shared/attributeclasses/attribute.ts": [
+        "../src/shared/attributeclasses/baseattribute.ts",
+        "../src/shared/attributeclasses/finalbonus.ts",
+        "../src/shared/attributeclasses/rawbonus.ts"
+      ],
+      "../src/shared/attributeclasses/finalbonus.ts": [
+        "../src/server/utility/timer.ts",
+        "../src/shared/attributeclasses/attribute.ts",
+        "../src/shared/attributeclasses/baseattribute.ts"
+      ],
+      "../src/shared/attributeclasses/rawbonus.ts": [
+        "../src/shared/attributeclasses/baseattribute.ts"
+      ],
+      "../src/shared/effects/damageeffect.ts": [
+        "../src/shared/attributeclasses/attribute.ts",
+        "../src/shared/attributeclasses/rawbonus.ts",
+        "../src/shared/effects/ieffect.ts"
+      ],
+      "../src/shared/effects/healeffect.ts": [
+        "../src/shared/attributeclasses/attribute.ts",
+        "../src/shared/attributeclasses/rawbonus.ts",
+        "../src/shared/effects/ieffect.ts"
+      ],
+      "../src/shared/iitemvisitor.ts": [
+        "../src/shared/itemclasses/equippable.ts",
+        "../src/shared/itemclasses/ihaseffect.ts",
+        "../src/shared/itemclasses/item.ts",
+        "../src/shared/itemclasses/modelvisualizable.ts"
+      ],
+      "../src/shared/itemclasses/equippable.ts": [
+        "../src/shared/iitemvisitor.ts",
+        "../src/shared/itemclasses/item.ts",
+        "../src/shared/itemclasses/modelvisualizable.ts",
+        "../src/shared/itemspecclasses/equippablespec.ts",
+        "../src/shared/itemspecclasses/equippablespecdecorator.ts",
+        "../src/shared/itemspecclasses/modelvisualizablespecdecorator.ts"
+      ],
+      "../src/shared/itemclasses/hasdamageeffect.ts": [
+        "../src/shared/effects/damageeffect.ts",
+        "../src/shared/iitemvisitor.ts",
+        "../src/shared/itemclasses/equippable.ts",
+        "../src/shared/itemclasses/ihaseffect.ts",
+        "../src/shared/itemspecclasses/damagespecdecorator.ts"
+      ],
+      "../src/shared/itemclasses/hashealeffect.ts": [
+        "../src/shared/effects/healeffect.ts",
+        "../src/shared/iitemvisitor.ts",
+        "../src/shared/itemclasses/equippable.ts",
+        "../src/shared/itemclasses/ihaseffect.ts",
+        "../src/shared/itemspecclasses/equippablespec.ts",
+        "../src/shared/itemspecclasses/healspecdecorator.ts"
+      ],
+      "../src/shared/itemclasses/ihaseffect.ts": [
+        "../src/shared/itemclasses/equippable.ts"
+      ],
+      "../src/shared/itemclasses/item.ts": [
+        "../src/shared/iitemvisitor.ts",
+        "../src/shared/itemclasses/modelvisualizable.ts",
+        "../src/shared/itemspecclasses/itemspec.ts"
+      ],
+      "../src/shared/itemclasses/modelvisualizable.ts": [
+        "../src/shared/iitemvisitor.ts",
+        "../src/shared/itemclasses/item.ts",
+        "../src/shared/itemspecclasses/modelvisualizablespecdecorator.ts"
+      ],
+      "../src/shared/itemfactory.ts": [
+        "../src/shared/itemclasses/equippable.ts",
+        "../src/shared/itemclasses/hasdamageeffect.ts",
+        "../src/shared/itemclasses/hashealeffect.ts",
+        "../src/shared/itemclasses/item.ts",
+        "../src/shared/itemclasses/modelvisualizable.ts",
+        "../src/shared/itemspecclasses/damagespecdecorator.ts",
+        "../src/shared/itemspecclasses/equippablespec.ts",
+        "../src/shared/itemspecclasses/equippablespecdecorator.ts",
+        "../src/shared/itemspecclasses/healspecdecorator.ts",
+        "../src/shared/itemspecclasses/itemspec.ts",
+        "../src/shared/itemspecclasses/modelvisualizablespecdecorator.ts"
+      ],
+      "../src/shared/itemspecclasses/consumablespec.ts": [
+        "../src/shared/effects/ieffect.ts",
+        "../src/shared/itemspecclasses/itemspec.ts"
+      ],
+      "../src/shared/itemspecclasses/damagespecdecorator.ts": [
+        "../src/shared/effects/damageeffect.ts",
+        "../src/shared/itemclasses/equippable.ts",
+        "../src/shared/itemclasses/hasdamageeffect.ts",
+        "../src/shared/itemfactory.ts",
+        "../src/shared/itemspecclasses/equippablespecdecorator.ts",
+        "../src/shared/itemspecclasses/ieffectspecdecorator.ts"
+      ],
+      "../src/shared/itemspecclasses/equippablespec.ts": [
+        "../src/shared/itemclasses/equippable.ts",
+        "../src/shared/itemclasses/item.ts",
+        "../src/shared/itemclasses/modelvisualizable.ts",
+        "../src/shared/itemspecclasses/equippablespecdecorator.ts",
+        "../src/shared/itemspecclasses/itemspec.ts",
+        "../src/shared/itemspecclasses/modelvisualizablespecdecorator.ts"
+      ],
+      "../src/shared/itemspecclasses/equippablespecdecorator.ts": [
+        "../src/shared/itemclasses/equippable.ts",
+        "../src/shared/itemclasses/item.ts",
+        "../src/shared/itemclasses/modelvisualizable.ts",
+        "../src/shared/itemfactory.ts",
+        "../src/shared/itemspecclasses/modelvisualizablespecdecorator.ts"
+      ],
+      "../src/shared/itemspecclasses/healspecdecorator.ts": [
+        "../src/shared/effects/healeffect.ts",
+        "../src/shared/itemclasses/equippable.ts",
+        "../src/shared/itemclasses/hashealeffect.ts",
+        "../src/shared/itemclasses/item.ts",
+        "../src/shared/itemclasses/modelvisualizable.ts",
+        "../src/shared/itemfactory.ts",
+        "../src/shared/itemspecclasses/equippablespec.ts",
+        "../src/shared/itemspecclasses/equippablespecdecorator.ts",
+        "../src/shared/itemspecclasses/ieffectspecdecorator.ts"
+      ],
+      "../src/shared/itemspecclasses/ieffectspecdecorator.ts": [
+        "../src/shared/itemspecclasses/equippablespecdecorator.ts"
+      ],
+      "../src/shared/itemspecclasses/itemspec.ts": [
+        "../src/shared/itemclasses/item.ts",
+        "../src/shared/itemfactory.ts"
+      ],
+      "../src/shared/itemspecclasses/modelvisualizablespecdecorator.ts": [
+        "../src/shared/itemclasses/equippable.ts",
+        "../src/shared/itemclasses/item.ts",
+        "../src/shared/itemclasses/modelvisualizable.ts",
+        "../src/shared/itemfactory.ts",
+        "../src/shared/itemspecclasses/equippablespec.ts",
+        "../src/shared/itemspecclasses/healspecdecorator.ts",
+        "../src/shared/itemspecclasses/itemspec.ts"
+      ],
+      "../src/shared/itemspecoracle.ts": [
+        "../src/shared/effects/damageeffect.ts",
+        "../src/shared/effects/healeffect.ts",
+        "../src/shared/itemspecclasses/damagespecdecorator.ts",
+        "../src/shared/itemspecclasses/equippablespec.ts",
+        "../src/shared/itemspecclasses/healspecdecorator.ts",
+        "../src/shared/itemspecclasses/itemspec.ts"
       ]
     },
     "exportedModulesMap": {},

@@ -3,19 +3,21 @@ import RoactRodux, { StoreProvider } from "@rbxts/roact-rodux";
 import Rodux, { Action, Store, StoreCreator } from "@rbxts/rodux";
 import { Players, ReplicatedStorage as RS } from "@rbxts/services"
 import { ClientSlotData } from "shared/ClientSlotData";
+import { InventoryComponentProps, InventoryUI } from "./inventory";
 
 
 
-import InventoryUI = require('client/inventory');
 let playerGui = Players.LocalPlayer.WaitForChild("PlayerGui") as PlayerGui;
 
 
-let invData: ClientSlotData[] = [];
 let handle: any;
+
+let invProps: InventoryComponentProps = {
+    slotDisplayDatas: []
+};
 
 RS.RemoteEvents.ServerToClient.OnInventoryInit.OnClientEvent.Connect((clientInvData: ClientSlotData[]) => {
 
-    invData = clientInvData;
 
     let store = new Rodux.Store(Rodux.createReducer<string, Action<string>>("hello", {
         handler: (state, action) => 
@@ -24,28 +26,27 @@ RS.RemoteEvents.ServerToClient.OnInventoryInit.OnClientEvent.Connect((clientInvD
         }
     }))
 
+    invProps.slotDisplayDatas = clientInvData;
     
+
     let app = <StoreProvider store = {store}>
-        <InventoryUI.InventoryComponent slotDisplayDatas={invData}></InventoryUI.InventoryComponent>
+        <InventoryUI {...invProps}></InventoryUI>
     </StoreProvider>
 
     handle = Roact.mount(app, playerGui.FindFirstChild("ScreenGui"), "StoreProvider");
  
 
     let NewInventoryComponent =  RoactRodux.connect((state, props) => {
-        print("STATE HAS CHANGED");
         return props;
-    })(InventoryUI.InventoryComponent);
+    })(InventoryUI);
 });
 
 
 RS.RemoteEvents.ServerToClient.OnSlotChanged.OnClientEvent.Connect((slotNumber: number, clientSlotData: ClientSlotData) => {
-    invData[slotNumber] = clientSlotData;
-
-    print("SLOT CHANGED ON THE CLIENT END");
+    invProps.slotDisplayDatas[slotNumber] = clientSlotData;
 
      Roact.update(handle, 
-        <InventoryUI.InventoryComponent slotDisplayDatas={invData}></InventoryUI.InventoryComponent>
+        <InventoryUI {...invProps}></InventoryUI>
     );
 });
 

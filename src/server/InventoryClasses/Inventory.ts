@@ -1,4 +1,5 @@
-import { IItem, Item } from "server/ItemClasses/Item";
+import { IItem, Item } from "shared/ItemClasses/Item";
+import { ItemFactory } from "shared/ItemFactory";
 import { ItemSlot } from "./ItemSlot";
 
 export class Inventory {
@@ -7,7 +8,7 @@ export class Inventory {
 
     OnSlotChanged: BindableEvent<{ (slotNum: number): void }>;
 
-    constructor(startingItems: (IItem | undefined)[]) {
+    constructor(startingItems: number[]) {
         this.slots = [];
 
         for (let i = 0; i < this.maxSlots; i++) {
@@ -23,10 +24,10 @@ export class Inventory {
         return this.slots;
     }
 
-    SetStartingItems(startingItems: (IItem | undefined)[]) {
+    SetStartingItems(startingItems: number[]) {
         for (let i = 0; i < startingItems.size(); i++) {
             if (startingItems[i] !== undefined) {
-                this.AddItem(startingItems[i] as IItem);
+                this.AddItem(startingItems[i]);
             }
         }
 
@@ -37,8 +38,7 @@ export class Inventory {
         return this.slots[index];
     }
 
-    AddItem(item: IItem) {
-        print(item.GetItemName())
+    AddItem(item: number) {
         for (let i = 0; i < this.slots.size(); i++) {
             if (this.slots[i].CanAddStack(item)) {
                 this.slots[i].SetItem(item);

@@ -49,7 +49,6 @@ do
 		return self.slots[index + 1]
 	end
 	function Inventory:AddItem(item)
-		print(item:GetItemName())
 		do
 			local _0 = 0
 			while _0 < #self.slots do

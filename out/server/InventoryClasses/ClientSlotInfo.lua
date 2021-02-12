@@ -21,23 +21,26 @@ do
 		self.slot.OnSlotChanged:Connect(function(changeType)
 			self.slotClientData.numStacks = self.slot:GetNumStacks()
 			if changeType == SlotChangeType.ITEM_ADDED_ON_EMPTY then
-				self:setItemData()
+				self.slotClientData.itemID = (self.slot:GetItem()):GetItemID()
 			end
 			self.OnSlotInfoChanged:Fire()
 		end)
-		self.slotClientData = {
-			itemName = "",
-			iconID = (slot:GetItem() ~= nil) and (slot:GetItem()):GetIconID() or "DefaultIcon",
-			itemDesc = "",
-			numStacks = self.slot:GetNumStacks(),
-		}
-		self:setItemData()
+		local _0 = {}
+		local _1 = "itemID"
+		local _2 = self.slot:GetItem()
+		if _2 ~= nil then
+			_2 = _2:GetItemID()
+		end
+		_0[_1] = _2
+		_0.numStacks = self.slot:GetNumStacks()
+		self.slotClientData = _0
+		print("from clientslotinfo " .. tostring(self.slotClientData.itemID))
+		-- itemName: "",
+		-- iconID: (slot.GetItem() !== undefined) ? (slot.GetItem() as IItem).GetIconID() : "DefaultIcon",
+		-- itemDesc: "",
+		-- this.setItemData();
 	end
 	function ClientSlotInfo:setItemData()
-		local _0 = self.slot:GetItem()
-		if _0 ~= nil then
-			_0:Accept(self)
-		end
 	end
 	function ClientSlotInfo:GetSlot()
 		return self.slot
@@ -47,27 +50,16 @@ do
 	end
 	function ClientSlotInfo:visitItem(item)
 		print("entered here")
-		self.slotClientData.itemName = item:GetItemName()
-		self.slotClientData.itemDesc = item:GetItemDescription()
-		self.slotClientData.iconID = item:GetIconID()
-		print(self.slotClientData.itemDesc)
+		-- this.slotClientData.itemName = item.GetItemName();
+		-- this.slotClientData.itemDesc = item.GetItemDescription();
+		-- this.slotClientData.iconID = item.GetIconID();
+		-- print(this.slotClientData.itemDesc);
 	end
 	function ClientSlotInfo:visitEquippable(item)
-		self:visitModelVisualizable(item)
 	end
 	function ClientSlotInfo:visitModelVisualizable(item)
-		self:visitItem(item)
 	end
 	function ClientSlotInfo:visitHasEffectItem(item)
-		self:visitEquippable(item)
-		if self.slotClientData.effects == nil then
-			self.slotClientData.effects = {}
-		end
-		local _0 = (self.slotClientData.effects)
-		local _1 = item:GetEffectDescription()
-		-- ▼ Array.push ▼
-		_0[#_0 + 1] = _1
-		-- ▲ Array.push ▲
 	end
 end
 return {

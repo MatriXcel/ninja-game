@@ -1,10 +1,9 @@
-import { connect } from "@rbxts/roact-rodux";
 import { t } from "@rbxts/t"
-import { ClientSlotData } from "shared/ClientSlotData";
 import { GameCharacter } from "./CharacterClasses/GameCharacter";
 import { ClientInventoryInfo } from "./InventoryClasses/ClientInventoryInfo";
-import { IItem } from "./ItemClasses/Item";
-import { ItemSpecOracle } from "./ItemSpecOracle";
+import { IItem } from "../shared/ItemClasses/Item";
+import { ItemSpecOracle } from "../shared/ItemSpecOracle";
+import { IItemSpec } from "shared/ItemSpecClasses/ItemSpec";
 
 
 let gameCharacters: Record<string, GameCharacter> = {}
@@ -19,11 +18,13 @@ game.GetService('Players').PlayerAdded.Connect((player) => {
 
     let clientInvInfo = new ClientInventoryInfo(characterInventory);
 
-    clientInvInfo.OnInventorySlotInfoChanged.Connect((slotNum, slotInfo) => {
-        RS.RemoteEvents.ServerToClient.OnSlotChanged.FireClient(player, slotNum, slotInfo.GetSlotClientData());
+    clientInvInfo.OnInventorySlotInfoChanged.Connect((slotNum, slotData) => {
+        RS.RemoteEvents.ServerToClient.OnSlotChanged.FireClient(player, slotNum, slotData);
     });
 
     wait(5);
-
-    RS.RemoteEvents.ServerToClient.OnInventoryInit.FireClient(player, clientInvInfo.GetSlotDatas());
+    print(clientInvInfo.GetSlotClientDatas());
+    RS.RemoteEvents.ServerToClient.OnInventoryInit.FireClient(player, clientInvInfo.GetSlotClientDatas());
+    wait(2);
+    characterInventory.AddItem((ItemSpecOracle.GetInstance().GetSpecByName("Greater Healing Potion") as IItemSpec).CreateItemFromSpec().GetInstanceID());
 });
